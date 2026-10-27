@@ -1,3 +1,1 @@
-# HIPAA Checklist
-- [ ] BAA
-- [ ] Cifrado
+# HIPAA

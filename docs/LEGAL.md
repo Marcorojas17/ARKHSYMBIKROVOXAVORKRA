@@ -1,2 +1,1 @@
 # Legal
-See /legal folder.

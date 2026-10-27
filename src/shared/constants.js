@@ -1,1 +1,1 @@
-export const APP_NAME = 'ARKH';
+export const APP = "ARKH";

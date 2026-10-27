@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'ARKH CLI';
+echo "ARKH CLI"

@@ -1,1 +1,1 @@
-export const ALGORITHM = 'Argon2id';
+// Argon2id

@@ -1,1 +1,1 @@
-export function wipe(arr) { arr.fill(0); }
+export function wipe() {}

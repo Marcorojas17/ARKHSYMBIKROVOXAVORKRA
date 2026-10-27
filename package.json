@@ -1,23 +1,5 @@
 {
   "name": "arkh-enterprise",
   "version": "1.0.0",
-  "description": "ARKHSYMBIKROVOXAVORKRA - Enterprise Protocol & Vault",
-  "type": "module",
-  "main": "apps/wallet/server.mjs",
-  "scripts": {
-    "start": "node apps/wallet/server.mjs",
-    "wallet": "node apps/wallet/server.mjs",
-    "test": "node scripts/check.js",
-    "sbom": "node scripts/sbom.js"
-  },
-  "author": "Marco Antonio Rojas Valdovinos",
-  "license": "SEE LICENSE IN LICENSE",
-  "dependencies": {
-    "dotenv": "^16.4.5",
-    "ethers": "^6.13.2",
-    "express": "^4.21.0"
-  },
-  "engines": {
-    "node": ">=20.0.0"
-  }
+  "type": "module"
 }

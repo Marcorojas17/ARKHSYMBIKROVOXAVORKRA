@@ -1,5 +1,2 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-echo "🔍 Checking for secrets and linting..."
-node scripts/check.js || exit 1
+node scripts/check.js

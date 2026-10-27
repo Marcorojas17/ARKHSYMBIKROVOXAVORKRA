@@ -1,1 +1,1 @@
-console.log('Seal script');
+console.log("Seal")

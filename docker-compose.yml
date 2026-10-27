@@ -1,13 +1,4 @@
-version: '3.9'
-
+version: "3.9"
 services:
-  arkh-wallet:
+  wallet:
     build: .
-    ports:
-      - "3000:3000"
-    environment:
-      - ALCHEMY_API_KEY=${ALCHEMY_API_KEY}
-      - NODE_ENV=production
-    restart: unless-stopped
-    security_opt:
-      - no-new-privileges:true

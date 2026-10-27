@@ -1,2 +1,1 @@
 # Notarization Proof
-Status: PENDING

@@ -1,2 +1,1 @@
-# Sigstore Rekor
-Pending.
+# Rekor

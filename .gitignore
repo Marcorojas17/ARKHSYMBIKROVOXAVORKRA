@@ -1,23 +1,6 @@
-# Dependencies
 node_modules/
-
-# Env & Secrets
 .env
-.env.local
-*.key
-*.tsr
-
-# Core & Data
 .arkh/
 data-room/
 dist/
-
-# OS & Logs
-.DS_Store
 *.log
-
-# Python
-__pycache__/
-*.pyc
-node_modules/
-apps/wallet/node_modules/

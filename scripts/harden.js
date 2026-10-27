@@ -1,1 +1,1 @@
-console.log('Harden script');
+console.log("Harden")

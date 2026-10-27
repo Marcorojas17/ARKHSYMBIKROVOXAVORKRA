@@ -1,1 +1,1 @@
-export function log(e) { console.log(e); }
+// Audit logger

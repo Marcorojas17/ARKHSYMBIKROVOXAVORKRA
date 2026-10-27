@@ -1,16 +1,1 @@
-{
-  "name": "ARKH Vault",
-  "short_name": "ARKH",
-  "description": "Bóveda de voz post-cuántica y legado digital",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#050510",
-  "theme_color": "#a855f7",
-  "icons": [
-    {
-      "src": "favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
-    }
-  ]
-}
+{}

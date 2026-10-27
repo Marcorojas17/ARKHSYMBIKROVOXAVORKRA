@@ -1,1 +1,1 @@
-default-src 'self';
+default-src self

@@ -1,1 +1,1 @@
-export class ARKHError extends Error {}
+export class Error {}

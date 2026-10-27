@@ -1,2 +1,1 @@
-# ZK Biometrics
-Research pending.
+# ZK Bio

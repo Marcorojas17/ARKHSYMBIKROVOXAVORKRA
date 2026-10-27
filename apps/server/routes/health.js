@@ -1,13 +1,1 @@
-import { Router } from 'express';
-const router = Router();
-
-router.get('/', (req, res) => {
-    res.json({
-        status: 'ok',
-        uptime: process.uptime(),
-        timestamp: new Date().toISOString(),
-        service: 'ARKH API'
-    });
-});
-
-export default router;
+export default (req, res) => res.json({ ok: true });

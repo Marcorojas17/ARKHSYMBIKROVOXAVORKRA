@@ -1,1 +1,1 @@
-console.log('Quantum test');
+console.log("Quantum")

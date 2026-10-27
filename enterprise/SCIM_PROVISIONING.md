@@ -1,2 +1,1 @@
-# SCIM Provisioning
-Status: PENDING
+# SCIM

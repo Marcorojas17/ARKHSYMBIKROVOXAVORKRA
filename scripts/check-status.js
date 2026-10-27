@@ -1,1 +1,1 @@
-console.log('Status script');
+console.log("Status")

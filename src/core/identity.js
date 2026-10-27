@@ -1,1 +1,1 @@
-export const IDENTITY_SCHEMA = 'did:kronos';
+export const IDENTITY = "DID";

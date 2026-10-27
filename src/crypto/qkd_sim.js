@@ -1,1 +1,1 @@
-// QKD Simulation (Educational)
+// QKD Sim

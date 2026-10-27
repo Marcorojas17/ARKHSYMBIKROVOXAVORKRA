@@ -1,1 +1,1 @@
-console.log('Sign script');
+console.log("Sign")

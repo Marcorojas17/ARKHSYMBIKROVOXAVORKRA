@@ -1,2 +1,1 @@
-# EV Cert Chain
-Pending.
+# EV Cert

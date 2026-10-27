@@ -1,1 +1,1 @@
-export const ENCLAVE_AVAILABLE = false;
+export const ENCLAVE = false;

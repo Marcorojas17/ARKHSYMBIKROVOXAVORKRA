@@ -1,2 +1,1 @@
-# Anti-AGI Mimicry
-Research pending.
+# Anti-AGI

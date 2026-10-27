@@ -1,8 +1,2 @@
 END USER LICENSE AGREEMENT (EULA)
-ARKHSYMBIKROVOXAVORKRA
-
-1. GRANT OF LICENSE: This EULA grants you a non-exclusive, non-transferable right to use the Software for personal or internal business purposes only.
-2. RESTRICTIONS: You may not reverse engineer, decompile, or disassemble the Software. You may not use the Software to train AI models.
-3. INTELLECTUAL PROPERTY: All title and IP rights in the Software are owned by Marco Antonio Rojas Valdovinos.
-4. TERMINATION: This license terminates automatically if you breach any term.
-5. GOVERNING LAW: Mexico.
+Uso no comercial.

@@ -1,2 +1,1 @@
-# Enclave (SGX/SEV)
-Hardware required.
+# Enclave

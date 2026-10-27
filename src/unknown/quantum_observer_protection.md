@@ -1,2 +1,1 @@
-# Quantum Observer
-Research pending.
+# Quantum

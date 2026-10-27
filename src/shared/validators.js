@@ -1,1 +1,1 @@
-export const isAddress = (a) => a.startsWith('0x');
+export const isAddr = (a) => a.startsWith("0x");

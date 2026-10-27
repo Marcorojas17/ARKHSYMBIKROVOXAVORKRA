@@ -1,2 +1,1 @@
-#!/usr/bin/env node
-console.log('Identity CLI');
+console.log("ID")

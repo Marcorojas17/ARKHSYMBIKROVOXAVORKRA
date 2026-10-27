@@ -1,1 +1,1 @@
-# Basic Vault Example
+# Basic Vault
