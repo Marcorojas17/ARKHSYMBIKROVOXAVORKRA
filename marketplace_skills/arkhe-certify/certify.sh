@@ -2,7 +2,7 @@
 FILE="$1"
 
 if [ -z "$ARKHE_SECRET" ]; then
-  echo "Error: Debes configurar ARKHE_SECRET. Ej: export ARKHE_SECRET=\$(openssl rand -hex 32)"
+  echo "Error: Debes configurar ARKHE_SECRET."
   exit 1
 fi
 
@@ -11,14 +11,24 @@ if [ ! -f "$FILE" ]; then
   exit 1
 fi
 
-# Crear carpeta de certificados si no existe
 mkdir -p certificates
 
 HASH=$(sha256sum "$FILE" | awk '{print $1}')
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 SEAL=$(echo -n "$HASH$TIMESTAMP" | openssl dgst -sha256 -hmac "$ARKHE_SECRET" | awk '{print $2}')
 
-OUT="certificates/$(basename "$FILE").arkh.json"
-echo "{\"file\": \"$FILE\", \"hash\": \"$HASH\", \"timestamp_utc\": \"$TIMESTAMP\", \"hmac_seal\": \"$SEAL\"}" > "$OUT"
+# El nombre incluye el timestamp para NO SOBRESCRIBIR evidencia
+BASE_NAME=$(basename "$FILE")
+SAFE_TIME=$(date -u +"%Y%m%d_%H%M%S")
+OUT="certificates/${BASE_NAME}_${SAFE_TIME}.arkh.json"
 
-echo "✅ Certificado forense generado y guardado en: $OUT"
+echo "{
+  \"format_version\": \"1.0\",
+  \"algorithm\": \"HMAC-SHA256\",
+  \"file\": \"$FILE\",
+  \"hash\": \"$HASH\",
+  \"timestamp_utc\": \"$TIMESTAMP\",
+  \"hmac_seal\": \"$SEAL\"
+}" > "$OUT"
+
+echo "✅ Certificado forense inmutable generado: $OUT"
