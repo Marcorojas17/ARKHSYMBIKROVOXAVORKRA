@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "principle": "51% Humano / 49% IA / 100% Real",
+  "commitments": [
+    "La IA nunca toma decisiones finales sin supervisión humana.",
+    "Toda decisión algorítmica debe ser auditable y explicable.",
+    "El humano puede revocar el acceso de la IA en cualquier momento.",
+    "Los datos de entrenamiento y ejecución deben ser transparentes.",
+    "La IA no puede clonar la identidad de un humano sin su consentimiento explícito."
+  ],
+  "status": "ACTIVE",
+  "last_updated": "2026-10-27"
+}

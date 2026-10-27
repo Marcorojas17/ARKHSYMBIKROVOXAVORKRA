@@ -1,0 +1,20 @@
+{
+  "name": "@arkh/wallet",
+  "version": "1.0.0",
+  "description": "ARKHE Wallet \u00b7 Multi-chain portfolio with anti-spam",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "ethers": "^6.17.0",
+    "express": "^5.3.0"
+  },
+  "private": true
+}

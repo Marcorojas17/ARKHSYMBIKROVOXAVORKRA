@@ -1,0 +1,17 @@
+{
+  "magic": "KINTSUGI-V1",
+  "signer": "did:kronos:human:marcorojas17",
+  "file": "apps/wallet/server.mjs",
+  "content_hash": "sha256:751d1d25cf5b8b50c57e02756675954f779f1f8aabb74f070f4ce72fc63e44b0",
+  "content_size": 1466,
+  "timestamp": "2026-10-27T06:57:15.768Z",
+  "golden_crack": [
+    "·▓░░▓░·▒░▓·░",
+    "·░░▒░·░▒░▓▒·",
+    "▒▓▓▒░▒·░▒▓▒·",
+    "▒▒░··░▓▓▒▓░░",
+    "▒▒░·▒▓░░···░"
+  ],
+  "gold_hash": "sha256:2f76e62b7e36165a517b4d819ce979178db0b97237fcbf6788719d76222564c4",
+  "witness": "sha256:9818bfc42dd9088bcf2b4ff337980e9131bbd6fd49daffd76bfb911e075f9dfd"
+}

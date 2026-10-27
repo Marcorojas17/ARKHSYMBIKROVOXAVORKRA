@@ -1,0 +1,1 @@
+export const isAddr = (a) => a.startsWith("0x");
