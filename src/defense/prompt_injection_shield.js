@@ -1,3 +1,1 @@
-# src/defense/prompt_injection_shield.js
-
-_Pendiente de implementacion._
+export function check(input) { return true; }

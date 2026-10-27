@@ -1,3 +1,2 @@
-# enterprise/SSO_SAML_OIDC.md
-
-_Pendiente de implementacion._
+# SSO - SAML 2.0 / OIDC
+Soporte planeado para Google Workspace y Entra ID.

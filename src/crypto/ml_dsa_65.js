@@ -1,3 +1,2 @@
-# src/crypto/ml_dsa_65.js
-
-_Pendiente de implementacion._
+export const ALGORITHM = 'ML-DSA-65';
+export const FIPS = '204';

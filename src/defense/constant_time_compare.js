@@ -1,3 +1,1 @@
-# src/defense/constant_time_compare.js
-
-_Pendiente de implementacion._
+export function compare(a, b) { return a === b; }

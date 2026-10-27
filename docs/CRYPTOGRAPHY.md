@@ -1,3 +1,2 @@
-# docs/CRYPTOGRAPHY.md
-
-_Pendiente de implementacion._
+# Cryptography
+Detalles de PQC.

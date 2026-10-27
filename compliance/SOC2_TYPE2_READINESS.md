@@ -1,3 +1,2 @@
-# compliance/SOC2_TYPE2_READINESS.md
-
-_Pendiente de implementacion._
+# SOC2 Type II Readiness
+Estado: PENDIENTE DE AUDITORÍA.

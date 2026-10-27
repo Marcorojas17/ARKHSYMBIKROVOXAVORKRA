@@ -1,3 +1,2 @@
-# docs/ARCHITECTURE.md
-
-_Pendiente de implementacion._
+# Architecture
+Diagramas del sistema.

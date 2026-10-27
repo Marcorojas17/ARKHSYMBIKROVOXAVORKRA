@@ -1,3 +1,3 @@
-# compliance/NIS2_EU_CHECKLIST.md
-
-_Pendiente de implementacion._
+# NIS2 EU Checklist
+- [ ] Registro
+- [ ] Gestión de riesgos

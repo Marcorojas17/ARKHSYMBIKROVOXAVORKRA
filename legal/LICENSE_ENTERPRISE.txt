@@ -1,3 +1,2 @@
-# legal/LICENSE_ENTERPRISE.txt
-
-_Pendiente de implementacion._
+LICENCIA ENTERPRISE
+Requiere contrato escrito.

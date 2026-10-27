@@ -1,3 +1,2 @@
-# legal/LICENSE_SOURCE_AVAILABLE.txt
-
-_Pendiente de implementacion._
+SOURCE AVAILABLE LICENSE
+Código visible para auditoría.

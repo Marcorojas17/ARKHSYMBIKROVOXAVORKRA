@@ -1,3 +1,2 @@
-# src/crypto/slh_dsa.js
-
-_Pendiente de implementacion._
+export const ALGORITHM = 'SLH-DSA';
+export const FIPS = '205';

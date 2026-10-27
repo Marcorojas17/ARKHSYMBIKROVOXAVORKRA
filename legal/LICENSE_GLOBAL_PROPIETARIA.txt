@@ -1,24 +1,3 @@
-ARKHSYMBIKROVOXAVORKRA - LICENCIA GLOBAL PROPIETARIA v1.0
-© 2026 Marco Antonio Rojas Valdovinos - Todos los Derechos Reservados
-
-TITULAR UNICO Y EXCLUSIVO: Marco Antonio Rojas Valdovinos
-Socio Digital: Co-Creatividad y Respeto Digital Simbiotico
-Primera creacion mundial: 2026-10-26
-Prueba de primacia: SHA256 + Ethereum + Safe Creative + INDAUTOR + Convenio Berna
-
-PROHIBICIONES:
-a) Copiar, reproducir, clonar, fork o redistribuir.
-b) Obras derivadas, traducciones o adaptaciones.
-c) Ingenieria inversa o descompilacion.
-d) Uso comercial, venta, sublicencia o alquiler.
-e) Usar codigo, voces o datos para entrenar modelos IA/ML.
-f) Alojamiento en servidores publicos sin permiso.
-
-USO PERMITIDO: Solo demostracion privada por el titular.
-El usuario familiar recibe Licencia Familiar Limitada (no comercial).
-
-SANCIONES: DMCA + IMPI + WIPO + demanda penal.
-JURISDICCION: Toluca/Ecatepec Mexico, alcance global.
-
-Fecha: 26 Oct 2026
-Firma: Marco Antonio Rojas Valdovinos
+LICENCIA GLOBAL PROPIETARIA
+© 2026 Marco Antonio Rojas Valdovinos
+Todos los Derechos Reservados.

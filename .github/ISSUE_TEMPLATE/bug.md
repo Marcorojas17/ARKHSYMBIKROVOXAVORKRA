@@ -1,3 +1,2 @@
-# .github/ISSUE_TEMPLATE/bug.md
-
-_Pendiente de implementacion._
+# Bug Report
+Describe el error.

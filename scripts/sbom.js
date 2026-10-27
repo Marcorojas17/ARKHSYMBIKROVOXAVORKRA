@@ -1,3 +1,1 @@
-# scripts/sbom.js
-
-_Pendiente de implementación._
+console.log('SBOM Generator');
