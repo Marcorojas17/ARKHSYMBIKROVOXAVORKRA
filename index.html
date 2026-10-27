@@ -1,67 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>ARKHSYMBIKROVOXAVORKR - ARKHE ZERO</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARKHSYMBIKROVOXAVORKR - ARKHE ZERO TOLUCA-GLOBAL</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#08080f;color:#e8e8f0;font-family:'Space Grotesk',system-ui;min-height:100vh;overflow-x:hidden;position:relative}
-body::before{content:'';position:fixed;inset:0;background:
-radial-gradient(600px at 10% 20%, rgba(124,58,237,0.15), transparent),
-radial-gradient(800px at 90% 80%, rgba(6,182,212,0.12), transparent),
-radial-gradient(500px at 50% 50%, rgba(236,72,153,0.08), transparent);pointer-events:none;z-index:-1}
-.top{padding:18px 20px 0;max-width:560px;margin:0 auto}
-.logo-mark{font-family:'JetBrains Mono';font-size:28px}
-.title{font-size:32px;font-weight:800;letter-spacing:-0.5px;line-height:0.9;margin:12px 0 0;background:linear-gradient(90deg,#a78bfa 0%,#7dd3fc 50%,#22d3ee 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.subtitle{color:#9ca3af;font-size:15px;margin:10px 0 22px}
-.card{background:rgba(18,18,28,0.9);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:20px 18px;margin:16px auto;max-width:560px;backdrop-filter:blur(20px)}
-.card h2{font-size:18px;letter-spacing:0.8px;font-weight:700;color:#e5e7ff;margin-bottom:12px}
-.card p{color:#9ca3af;font-size:14px;line-height:1.5}
-.badges{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 16px}
-.badge{font-family:'JetBrains Mono';font-size:11px;padding:5px 10px;border-radius:20px;border:1px solid}
-.badge.green{color:#10b981;border-color:rgba(16,185,129,0.4);background:rgba(16,185,129,0.08)}
-.badge.cyan{color:#22d3ee;border-color:rgba(34,211,238,0.4);background:rgba(34,211,238,0.08)}
-.badge.pink{color:#ec4899;border-color:rgba(236,72,153,0.4);background:rgba(236,72,153,0.08)}
-.btn{width:100%;padding:16px;border:none;border-radius:14px;font-size:16px;font-weight:700;color:white;cursor:pointer;background:linear-gradient(135deg,#a855f7 0%,#7c3aed 30%,#06b6d4 100%);box-shadow:0 8px 24px rgba(124,58,237,0.3)}
-.footer{text-align:center;padding:24px 0 40px;color:#4b5563;font-size:12px}
-.status-row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 0}
-.status-tag{font-family:'JetBrains Mono';font-size:10px;padding:4px 8px;border-radius:20px;border:1px solid #2a2a4a;background:#151528;color:#8b8db8}
+body{background:#08080f;color:#e8e8f0;font-family:system-ui;padding:0;min-height:100vh}
+.top{padding:20px;max-width:720px;margin:0 auto}
+.logo{font-family:monospace;font-size:28px;color:#a78bfa}
+.tit{font-size:32px;font-weight:900;background:linear-gradient(90deg,#a78bfa 0%,#22d3ee 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:6px 0;line-height:0.9}
+.sub{color:#9ca3af;font-size:15px;margin-bottom:14px}
+.stats{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.s{font-family:monospace;font-size:10px;padding:4px 8px;border-radius:20px;border:1px solid #2a2a4a;background:#151528;color:#8b8db8}
+.s.ok{color:#10b981;border-color:#10b98166}
+.grid{max-width:720px;margin:0 auto;padding:0 16px 40px;display:grid;gap:12px}
+.card{background:#12121c;border:1px solid #23233a;border-radius:18px;padding:16px;transition:0.2s}
+.card:hover{border-color:#7c3aed66;background:#181828}
+.card b{color:#a78bfa;display:block;margin-bottom:4px;font-size:14px}
+.card small{color:#888;font-size:12px;word-break:break-all}
+.badge{font-family:monospace;font-size:10px;padding:3px 8px;border-radius:20px;border:1px solid;margin-right:4px}
+.green{color:#10b981;border-color:#10b98144;background:#10b98111}
+.cyan{color:#22d3ee;border-color:#22d3ee44;background:#22d3ee11}
+.pink{color:#ec4899;border-color:#ec489944;background:#ec489911}
+.btn{width:100%;padding:14px;border:none;border-radius:12px;font-weight:800;color:white;background:linear-gradient(135deg,#a855f7,#06b6d4);margin-top:10px;cursor:pointer}
+.sec{max-width:720px;margin:20px auto 0;padding:0 16px;font-size:12px;letter-spacing:1.5px;color:#4b5563;font-weight:700}
+.footer{text-align:center;padding:30px;color:#4b5563;font-size:11px}
+a.card{text-decoration:none;color:inherit;display:block}
+pre{font-size:11px;overflow:auto}
 </style>
 </head>
 <body>
 <div class="top">
-<div class="logo-mark">○_•</div>
-<div class="title">ARKHSYMBIKROVOXAVORKR</div>
-<div class="subtitle">El legado no se hereda. Se firma.</div>
-<div class="status-row">
-<span class="status-tag" style="color:#10b981;border-color:#10b981">● LIVE</span>
-<span class="status-tag">SEALED_BY MARCO</span>
-<span class="status-tag">51% HUMANO 49% IA</span>
-<span class="status-tag">TOLUCA-GLOBAL-e8d9eac8</span>
+<div class="logo">○_•</div>
+<div class="tit">ARKHSYMBIKROVOXAVORKR</div>
+<div class="sub">El legado no se hereda. Se firma.</div>
+<div class="stats">
+<span class="s ok">● LIVE</span><span class="s">SEALED_BY MARCO</span><span class="s">51% HUMANO 49% IA</span><span class="s">TOLUCA-GLOBAL-e8d9eac8</span><span class="s ok">■ 1330 FILES</span><span class="s ok">■ 122 SBOM</span><span class="s ok">■ 172 LEGACY</span><span class="s ok">■ KINTSUGI</span><span class="s ok">■ KYBER/DILITHIUM</span>
 </div>
 </div>
-<div class="card">
-<h2>PRESERVACION DE VOZ</h2>
-<p>Graba la voz de tus seres queridos. Cada grabación recibe un hash SHA-256 único.</p>
-<div class="badges">
-<span class="badge green">SHA-256</span>
-<span class="badge cyan">LOCAL</span>
-<span class="badge pink">ANTI-TRAINING</span>
+
+<div class="sec">🎙️ BÓVEDA PRINCIPAL</div>
+<div class="grid">
+<a class="card" href="apps/portal/voz-original.html" style="background:linear-gradient(135deg,#1a1a2e,#12121c);border-color:#7c3aed55">
+<b>🎙️ PRESERVACION DE VOZ - GRABAR</b>
+<small>Graba tu voz real, sella SHA-256, hereda. ORIGINAL_ONLY_NO_CLONE | Anti-training | Local</small>
+<div style="margin-top:10px"><span class="badge green">SHA-256</span><span class="badge cyan">LOCAL</span><span class="badge pink">ANTI-TRAINING</span></div>
+<button class="btn">▶️ Grabar voz ahora</button>
+</a>
 </div>
-<button class="btn" onclick="location.href='apps/portal/voz-original.html'">Grabar voz</button>
+
+<div class="sec">⚖️ LEGAL & LICENCIAS - 404 RESUELTO</div>
+<div class="grid">
+<a class="card" href="[STRIPPED 77 bytes].html"><b>⚖️ Consentimiento Legal - ORIGINAL_ONLY</b><small>LFPDPPP MX, GDPR, California AB-362, WIPO - Te blinda contra demandas</small></a>
+<a class="card" href="[STRIPPED 66 bytes].html"><b>👨‍👩‍👧 Licencia Familiar $99/año</b><small>Herencia como bien inmaterial familiar - Bien vendible</small></a>
+<a class="card" href="[STRIPPED 74 bytes].html"><b>📖 Arquitectura - Por qué NO clonamos</b><small>Diferencia vs ElevenLabs - Anti-malware - Honestidad técnica</small></a>
 </div>
-<div class="card">
-<h2>BOVEDA FAMILIAR</h2>
-<p style="color:#6b7280;font-size:14px">Aún no hay voces guardadas.</p>
+
+<div class="sec">📦 SBOM & ANCLAJE STORACHA</div>
+<div class="grid">
+<a class="card" href="ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/dist/sbom.json"><b>📦 SBOM CycloneDX JSON - 122 archivos</b><small>Master: f8e754032a192a924752652bc19cedf5bd33b85e0e8c04118978f72650667004 | Espacio: ARKHE-ZERO-TOLUCA</small></a>
+<a class="card" href="ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/dist/sbom.cyclonedx.json"><b>📦 SBOM CycloneDX detallado</b><small>Con hashes SHA256 de cada archivo</small></a>
+<a class="card" href="security/sbom.cyclonedx.json"><b>🔒 Security SBOM</b><small>SBOM de seguridad</small></a>
 </div>
-<div class="card">
-<h2>LICENCIAS</h2>
-<ul style="list-style:none;margin-top:8px">
-<li style="color:#9ca3af;font-size:13px">• Global Propietaria (uso exclusivo titular)</li>
-<li style="color:#9ca3af;font-size:13px">• Familiar Limitada (uso privado)</li>
-</ul>
+
+<div class="sec">🏗️ ESTRUCTURA DEFINITIVA - TODO EL REPO INDEXADO</div>
+<div class="grid">
+<a class="card" href="ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/legal"><b>📁 Legal - 5 licencias</b><small>ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/legal - 35 items - Explorar carpeta</small></a>
+<a class="card" href="ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/docs"><b>📁 Docs - Arquitectura</b><small>ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/docs - 2 items - Explorar carpeta</small></a>
+<a class="card" href="ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/dist"><b>📁 Dist - SBOM & Build</b><small>ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/dist - 2 items - Explorar carpeta</small></a>
+<a class="card" href="ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/_LEGACY_RECUPERADO"><b>📁 _LEGACY_RECUPERADO - 172 archivos preservados sin borrar</b><small>ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/_LEGACY_RECUPERADO - 206 items - Explorar carpeta</small></a>
+<a class="card" href="ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/security"><b>📁 Security - Firmas & Attestations</b><small>ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/security - 2 items - Explorar carpeta</small></a>
+<a class="card" href="ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/compliance"><b>📁 Compliance - SOC2/ISO27001/GDPR/LFPDPPP</b><small>ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/compliance - 1 items - Explorar carpeta</small></a>
+<div class="card"><b>📁 Enterprise - SSO/SCIM/SLA</b><small>ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/enterprise - No encontrado (se crea en scaffold)</small></div>
+<a class="card" href="apps/portal"><b>📁 Apps/Portal - Bóveda Voz</b><small>apps/portal - 12 items - Explorar carpeta</small></a>
+<a class="card" href="legal"><b>📁 Legal Raíz</b><small>legal - 32 items - Explorar carpeta</small></a>
+<a class="card" href="docs"><b>📁 Docs Raíz</b><small>docs - 12 items - Explorar carpeta</small></a>
+
 </div>
-<div class="footer">© 2026 Marco Antonio Rojas Valdovinos</div>
+
+<div class="sec">🌐 GLOBAL & GITHUB</div>
+<div class="grid">
+<a class="card" href="https://github.com/Marcorojas17/ARKHSYMBIKROVOXAVORKRA"><b>🐙 GitHub - Fuente completa</b><small>1330 files + _LEGACY_RECUPERADO + estructura definitiva sin borrar nada - cab402d</small></a>
+<div class="card"><b>🚀 Comandos Termux</b><small style="font-family:monospace;display:block;line-height:1.8;margin-top:6px">
+bash install.sh → levanta todo<br>
+python server.py → portal en :3001<br>
+cloudflared tunnel --url http://localhost:3001 → URL pública<br>
+./test-todo.sh → verifica 13/13 OK
+</small></div>
+</div>
+
+<div class="footer">
+○_• ARKHE ZERO<br>
+© 2026 Marco Antonio Rojas Valdovinos<br>
+Toluca, Estado de México → Global | 51% Humano 49% IA VALDOVINOS | Kintsugi Activo<br>
+Master: f8e75403... | Bus Toluca→CDMX 23:47 | KYBER/DILITHIUM | ARKHE-ZERO-TOLUCA: marco.a.rojas.v@hotmail.com
+</div>
 </body>
 </html>
