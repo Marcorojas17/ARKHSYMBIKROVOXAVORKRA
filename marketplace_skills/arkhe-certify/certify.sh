@@ -2,7 +2,7 @@
 FILE="$1"
 
 if [ -z "$ARKHE_SECRET" ]; then
-  echo "Error: Debes configurar la variable de entorno ARKHE_SECRET (export ARKHE_SECRET='tu_llave_privada')"
+  echo "Error: Debes configurar ARKHE_SECRET. Ej: export ARKHE_SECRET=\$(openssl rand -hex 32)"
   exit 1
 fi
 
@@ -11,10 +11,14 @@ if [ ! -f "$FILE" ]; then
   exit 1
 fi
 
+# Crear carpeta de certificados si no existe
+mkdir -p certificates
+
 HASH=$(sha256sum "$FILE" | awk '{print $1}')
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-
-# HMAC usando la variable de entorno secreta
 SEAL=$(echo -n "$HASH$TIMESTAMP" | openssl dgst -sha256 -hmac "$ARKHE_SECRET" | awk '{print $2}')
 
-echo "{\"file\": \"$FILE\", \"hash\": \"$HASH\", \"timestamp_utc\": \"$TIMESTAMP\", \"hmac_seal\": \"$SEAL\"}"
+OUT="certificates/$(basename "$FILE").arkh.json"
+echo "{\"file\": \"$FILE\", \"hash\": \"$HASH\", \"timestamp_utc\": \"$TIMESTAMP\", \"hmac_seal\": \"$SEAL\"}" > "$OUT"
+
+echo "✅ Certificado forense generado y guardado en: $OUT"
