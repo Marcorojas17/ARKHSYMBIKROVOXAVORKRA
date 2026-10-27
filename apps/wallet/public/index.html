@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARKHE Wallet · Multi-chain</title>
+<style>
+*{box-sizing:border-box;margin:0}
+body{background:#050510;color:#e0e0ff;font-family:system-ui,sans-serif;min-height:100vh;padding:20px}
+.container{max-width:760px;margin:0 auto}
+h1{background:linear-gradient(90deg,#a855f7,#06b6d4);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1.4rem;margin-bottom:4px}
+.sub{color:#666;font-size:0.8rem;margin-bottom:16px}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:16px;margin-bottom:12px}
+input{width:100%;padding:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;color:#fff;font-family:monospace;font-size:0.85rem}
+input:focus{outline:none;border-color:#a855f7}
+button{background:linear-gradient(90deg,#a855f7,#06b6d4);color:#fff;border:none;padding:12px 24px;border-radius:10px;font-weight:600;cursor:pointer;width:100%;margin-top:8px;font-size:0.9rem}
+button:disabled{opacity:0.5;cursor:not-allowed}
+.chain-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.chain-name{font-size:0.75rem;text-transform:uppercase;letter-spacing:2px;color:#06b6d4;font-weight:600}
+.chain-balance{font-family:monospace;font-size:1rem;color:#fff}
+.chain-balance b{font-size:1.3rem;background:linear-gradient(90deg,#a855f7,#06b6d4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.token{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.04);font-family:monospace;font-size:0.8rem}
+.token:last-child{border:none}
+.token::before{content:"✓ ";color:#10b981}
+.tx{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.04);font-family:monospace;font-size:0.75rem;color:#888}
+.tx:last-child{border:none}
+.label{font-size:0.65rem;text-transform:uppercase;letter-spacing:2px;color:#666;margin:10px 0 4px}
+.spam-info{color:#444;font-size:0.65rem;font-family:monospace;margin-top:8px}
+.chain-error{color:#ef4444;font-size:0.75rem;font-family:monospace;padding:8px;background:rgba(239,68,68,0.08);border-radius:6px}
+.error{color:#ef4444;background:rgba(239,68,68,0.1);padding:10px;border-radius:8px;margin-top:10px;font-size:0.85rem}
+.hidden{display:none}
+.resolved{color:#06b6d4;font-size:0.7rem;font-family:monospace;margin-top:6px;word-break:break-all}
+.total{font-size:0.75rem;color:#888;margin-top:8px;font-family:monospace}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>◯_● ARKHE Wallet</h1>
+  <p class="sub">Multi-chain · Anti-spam · ENS support</p>
+
+  <div class="card">
+    <input id="address" placeholder="0x... o nombre.eth" value="vitalik.eth" />
+    <button id="btn">Consultar</button>
+    <div id="error" class="error hidden"></div>
+    <div id="resolved" class="resolved hidden"></div>
+  </div>
+
+  <div id="result"></div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+
+function shortAddr(a) {
+  if (!a) return '';
+  return a.slice(0, 10) + '...' + a.slice(-6);
+}
+
+function renderChain(c) {
+  if (c.error) {
+    return '<div class="card"><div class="chain-header"><span class="chain-name">' + c.chain + '</span></div><div class="chain-error">⚠ ' + c.error.slice(0, 100) + '</div></div>';
+  }
+  const tokensHtml = c.tokens.length === 0
+    ? '<div style="color:#555;font-size:0.75rem;font-family:monospace">Sin tokens legítimos</div>'
+    : c.tokens.map(t => '<div class="token"><span>' + t.symbol + '</span><span>' + parseFloat(t.balance).toFixed(4) + '</span></div>').join('');
+
+  const txsHtml = c.transactions.length === 0
+    ? '<div style="color:#555;font-size:0.75rem;font-family:monospace">Sin transacciones</div>'
+    : c.transactions.slice(0, 3).map(tx => '<div class="tx"><span>' + tx.date + '</span><span>' + tx.amount + ' ' + tx.asset + '</span></div>').join('');
+
+  return '<div class="card">' +
+    '<div class="chain-header"><span class="chain-name">' + c.chain + '</span><span class="chain-balance"><b>' + parseFloat(c.balance).toFixed(4) + '</b> ' + c.symbol + '</span></div>' +
+    '<div class="label">Tokens (' + c.tokens.length + ')</div>' +
+    tokensHtml +
+    '<div class="label">Últimas TX</div>' +
+    txsHtml +
+    '<div class="spam-info">' + c.spamFiltered + ' spam filtrados · chainId ' + c.chainId + '</div>' +
+  '</div>';
+}
+
+$('btn').onclick = async () => {
+  const addr = $('address').value.trim();
+  $('error').classList.add('hidden');
+  $('resolved').classList.add('hidden');
+  $('result').innerHTML = '';
+  $('btn').disabled = true;
+  $('btn').textContent = 'Consultando 5 redes...';
+
+  try {
+    const res = await fetch('/api/wallet/' + encodeURIComponent(addr));
+    const data = await res.json();
+    if (data.error) throw new Error(data.error);
+
+    if (data.resolvedFrom) {
+      $('resolved').textContent = '↳ ' + data.resolvedFrom + ' → ' + data.address;
+      $('resolved').classList.remove('hidden');
+    }
+
+    $('result').innerHTML = data.chains.map(renderChain).join('');
+  } catch (e) {
+    $('error').textContent = e.message;
+    $('error').classList.remove('hidden');
+  } finally {
+    $('btn').disabled = false;
+    $('btn').textContent = 'Consultar';
+  }
+};
+</script>
+</body>
+</html>
