@@ -1,0 +1,17 @@
+{
+  "magic": "KINTSUGI-V1",
+  "signer": "did:kronos:human:marcorojas17",
+  "file": "README.md",
+  "content_hash": "sha256:caf398920c2a4d008d7b15c919b57215a9c831780961f7c5f388f7fd56b5b473",
+  "content_size": 14911,
+  "timestamp": "2026-10-27T11:16:50.195Z",
+  "golden_crack": [
+    "▓▓▒▓▓▓▒..▒..",
+    "▒▒▒▓▒▒.▒░▓▒▒",
+    "▓▒..░.▓▓.▓▓▒",
+    "░▒.░░▒..▓▒.▒",
+    "░▓▓░.▓.▓░▒▒▓"
+  ],
+  "gold_hash": "sha256:dd9ffda22b10a9be890a4f88cb3173de3dda69375a23ea3b6cd50e0e589cf514",
+  "witness": "sha256:9e90225cba32294ac07553d8e833e54da4a97f1a39e266d48551ceb95a938123"
+}
