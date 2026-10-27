@@ -1,31 +1,8 @@
-ACUERDO DE LICENCIA DE USUARIO FINAL (EULA)
+END USER LICENSE AGREEMENT (EULA)
 ARKHSYMBIKROVOXAVORKRA
-© 2026 Marco Antonio Rojas Valdovinos
 
-1. ACEPTACION
-Al instalar o usar este software, acepta estos terminos.
-
-2. LICENCIA
-Personal, no transferible, no exclusiva, revocable.
-
-3. RESTRICCIONES
-- No copiar, modificar o distribuir.
-- No ingenieria inversa.
-- No uso comercial.
-- No entrenar IA con grabaciones.
-- No subir a servidores publicos.
-
-4. PROPIEDAD
-Titular exclusivo: Marco Antonio Rojas Valdovinos.
-
-5. GARANTIA
-"TAL CUAL", sin garantias.
-
-6. TERMINACION
-Automatica si viola cualquier termino.
-
-7. LEY APLICABLE
-Ciudad de Mexico, Mexico.
-
-Fecha: 26 Oct 2026
-Titular: Marco Antonio Rojas Valdovinos
+1. GRANT OF LICENSE: This EULA grants you a non-exclusive, non-transferable right to use the Software for personal or internal business purposes only.
+2. RESTRICTIONS: You may not reverse engineer, decompile, or disassemble the Software. You may not use the Software to train AI models.
+3. INTELLECTUAL PROPERTY: All title and IP rights in the Software are owned by Marco Antonio Rojas Valdovinos.
+4. TERMINATION: This license terminates automatically if you breach any term.
+5. GOVERNING LAW: Mexico.

@@ -1,3 +1,13 @@
-# CODE_OF_CONDUCT.md
+# Contributor Covenant Code of Conduct
 
-_Pendiente de implementacion._
+## Our Pledge
+We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone.
+
+## Our Standards
+Examples of behavior that contributes to a positive environment:
+- Demonstrating empathy and kindness
+- Being respectful of differing opinions
+- Giving and gracefully accepting constructive feedback
+
+## Enforcement
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to marco.a.rojas.v@hotmail.com.

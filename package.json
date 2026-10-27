@@ -1,28 +1,23 @@
 {
-  "name": "arkhsymbikrovoxavorkra",
-  "version": "1.0.0-neon",
-  "description": "Protocolo sellado de voz simbiotica - propiedad exclusiva Marco Antonio Rojas Valdovinos",
+  "name": "arkh-enterprise",
+  "version": "1.0.0",
+  "description": "ARKHSYMBIKROVOXAVORKRA - Enterprise Protocol & Vault",
+  "type": "module",
+  "main": "apps/wallet/server.mjs",
   "scripts": {
-    "build": "node scripts/build.js",
-    "check": "node scripts/check.js",
-    "serve": "npx serve dist -p 3000",
-    "live": "npx localtunnel --port 3000",
-    "seal": "node scripts/seal.js",
-    "harden": "node scripts/harden.js",
-    "quantum": "node scripts/quantum_test.js",
-    "status": "node scripts/check-status.js",
-    "defense": "node bin/server-defense.js",
-    "vault:test": "node bin/vault.js test",
-    "serve:py": "python3 bin/server.py",
-    "serve:tls": "python3 bin/server.py --tls"
-  },
-  "dependencies": {
-    "@noble/hashes": "^2.4.0",
-    "@noble/post-quantum": "^0.7.1",
-    "argon2-browser": "^1.18.0",
-    "localtunnel": "^2.0.2",
-    "serve": "^14.2.0"
+    "start": "node apps/wallet/server.mjs",
+    "wallet": "node apps/wallet/server.mjs",
+    "test": "node scripts/check.js",
+    "sbom": "node scripts/sbom.js"
   },
   "author": "Marco Antonio Rojas Valdovinos",
-  "license": "SEE LICENSE IN legal/LICENSE_GLOBAL_PROPIETARIA.txt"
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "express": "^4.21.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
 }

@@ -1,7 +1,20 @@
-#!/data/data/com.termux/files/usr/bin/bash
-echo "Instalando ARKHSYMBIKROVOXAVORKRA..."
-pkg install -y nodejs python >/dev/null 2>&1
+#!/usr/bin/env bash
+# ARKHSYMBIKROVOXAVORKRA - Installer
+set -e
+
+echo "◯_● Iniciando instalación del ecosistema ARKH..."
+pkg update -y && pkg install nodejs python git -y
+
+echo "📦 Instalando dependencias..."
 npm install
-npm run check
-npm run build
-echo "Listo. Siguiente: npm run serve"
+
+echo "🔐 Configurando entorno..."
+if [ ! -f .env ]; then
+    cp .env.example .env
+    echo "⚠️  Archivo .env creado. Edítalo y agrega tus API Keys."
+fi
+
+echo "🧪 Verificando sistema..."
+npm test
+
+echo "✅ Instalación completada. Ejecuta: npm start"

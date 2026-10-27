@@ -1,3 +1,4 @@
-# .gitattributes
-
-_Pendiente de implementacion._
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary

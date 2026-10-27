@@ -1,3 +1,13 @@
-# tsconfig.json
-
-_Pendiente de implementacion._
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*", "apps/**/*"],
+  "exclude": ["node_modules"]
+}

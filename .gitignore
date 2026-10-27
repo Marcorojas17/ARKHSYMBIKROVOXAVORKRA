@@ -1,7 +1,21 @@
+# Dependencies
 node_modules/
-dist/
+
+# Env & Secrets
+.env
+.env.local
+*.key
+*.tsr
+
+# Core & Data
 .arkh/
 data-room/
-.env
-*.key
+dist/
+
+# OS & Logs
+.DS_Store
 *.log
+
+# Python
+__pycache__/
+*.pyc

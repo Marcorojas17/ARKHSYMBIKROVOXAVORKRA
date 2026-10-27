@@ -1,3 +1,7 @@
-# .dockerignore
-
-_Pendiente de implementacion._
+node_modules
+.git
+.env
+.arkh
+data-room
+dist
+*.log
