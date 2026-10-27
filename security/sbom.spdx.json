@@ -6,27 +6,11 @@
   "documentNamespace": "https://arkhe-zero.dev/spdx/arkh-enterprise-1.0.0",
   "creationInfo": {
     "created": "2026-10-27T00:00:00Z",
-    "creators": [
-      "Tool: ARKH-SBOM-Generator"
-    ],
-    "comment": "SBOM generado para auditor\u00eda de seguridad y trazabilidad."
+    "creators": ["Tool: ARKH-SBOM-Generator"],
+    "comment": "SBOM generado para auditoría de seguridad y trazabilidad."
   },
   "packages": [
-    {
-      "name": "arkh-enterprise",
-      "SPDXID": "SPDXRef-Package-ARKH",
-      "versionInfo": "1.0.0",
-      "downloadLocation": "https://github.com/Marcorojas17/ARKHSYMBIKROVOXAVORKRA",
-      "licenseConcluded": "Proprietary",
-      "licenseDeclared": "Proprietary"
-    },
-    {
-      "name": "ethers",
-      "SPDXID": "SPDXRef-Package-ethers",
-      "versionInfo": "6.13.2",
-      "downloadLocation": "https://npmjs.org/package/ethers",
-      "licenseConcluded": "MIT",
-      "licenseDeclared": "MIT"
-    }
+    { "name": "arkh-enterprise", "SPDXID": "SPDXRef-Package-ARKH", "versionInfo": "1.0.0", "downloadLocation": "https://github.com/Marcorojas17/ARKHSYMBIKROVOXAVORKRA", "licenseConcluded": "Proprietary", "licenseDeclared": "Proprietary" },
+    { "name": "ethers", "SPDXID": "SPDXRef-Package-ethers", "versionInfo": "6.13.2", "downloadLocation": "https://npmjs.org/package/ethers", "licenseConcluded": "MIT", "licenseDeclared": "MIT" }
   ]
 }
