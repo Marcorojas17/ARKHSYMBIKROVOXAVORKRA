@@ -1,3 +1,13 @@
-node_modules
-.git
+# Dependencias
+node_modules/
+.git/
 .env
+
+# Entorno ARKH
+.arkh/
+data-room/
+dist/
+
+# Sistema
+*.log
+.DS_Store
