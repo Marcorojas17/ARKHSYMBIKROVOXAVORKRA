@@ -15,3 +15,6 @@ node_modules/
 apps/wallet/node_modules/
 .env
 test.txt
+ngrok-v3-stable-linux-arm64.tgz
+*.tgz
+.env
