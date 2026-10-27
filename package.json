@@ -1,5 +1,8 @@
 {
   "name": "arkh-enterprise",
   "version": "1.0.0",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@storacha/client": "^2.1.4"
+  }
 }

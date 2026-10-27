@@ -21,3 +21,7 @@ ngrok-v3-stable-linux-arm64.tgz
 ngrok-v3-stable-linux-arm64.tgz
 *.tgz
 .env
+dist/
+test_secret.txt
+_LEGACY_RECUPERADO/
+*.cjs

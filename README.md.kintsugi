@@ -2,16 +2,16 @@
   "magic": "KINTSUGI-V1",
   "signer": "did:kronos:human:marcorojas17",
   "file": "README.md",
-  "content_hash": "sha256:caf398920c2a4d008d7b15c919b57215a9c831780961f7c5f388f7fd56b5b473",
-  "content_size": 14911,
-  "timestamp": "2026-10-27T11:33:35.974Z",
+  "content_hash": "sha256:9a92a644c5eee08cddcfbefbdea2c64d43559a1166488a350cf1c58350c47455",
+  "content_size": 348,
+  "timestamp": "2026-10-27T19:27:55.044Z",
   "golden_crack": [
-    "░▓░░▒▒...▒▓.",
-    "░░▒.░▒.▒▓.▓.",
-    "▓...▓░▒▓.▓.▒",
-    "░▒..▒▒▒▓..▓░",
-    "░▓░░.░▒.▓░.▓"
+    "▒░.▓▒▓.░░▓.░",
+    "▒..▒▒░░▒░.▓▒",
+    "░░▓.░▒░▒░.▓░",
+    "▓.░..░.▓░░░▓",
+    "▓▒.▒▒.░▒▒..."
   ],
-  "gold_hash": "sha256:5f46a90309f25491591ac0c2e311e78d2d095b228b9c11f54c5517a0e42dbf8f",
-  "witness": "sha256:0dc718d3b2b0bd84b012defe8da1ed8981b236e6d34099411c07eca28e034e33"
+  "gold_hash": "sha256:a62dad056f16910ab44853cb76c16a4a51d7e071342e764fcb2b9248a0324175",
+  "witness": "sha256:8098d1443edc2f4c7cd0fec3d3f5df9b6b935f662b6fac485bb7c2a3d665a212"
 }

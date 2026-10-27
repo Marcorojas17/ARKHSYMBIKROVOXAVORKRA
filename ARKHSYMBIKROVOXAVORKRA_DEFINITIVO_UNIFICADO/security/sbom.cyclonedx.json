@@ -5,7 +5,7 @@
   "space": "ARKHE-ZERO-TOLUCA",
   "anchor": "ARKHE-ZERO-TOLUCA",
   "email": "marco.a.rojas.v@hotmail.com",
-  "timestamp": "2026-10-27T15:24:19.352Z",
+  "timestamp": "2026-10-27T15:26:12.233Z",
   "masterHash": "f8e754032a192a924752652bc19cedf5bd33b85e0e8c04118978f72650667004",
   "voiceVault": "ORIGINAL_ONLY_NO_CLONE - NO TTS",
   "kintsugi": "grietas doradas activas - 51%H 49%AI - VALDOVINOS",
@@ -362,6 +362,11 @@
       "size": 516
     },
     {
+      "file": "security/sbom.cyclonedx.json",
+      "sha256": "c0be7369ad7f3ed82f6aafec57e473eeee40258e8a946111a79b7148662ef99a",
+      "size": 20012
+    },
+    {
       "file": "src/.gitkeep",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "size": 0
@@ -617,7 +622,7 @@
       "size": 8
     }
   ],
-  "components": 121,
+  "components": 122,
   "legal": [
     "VOICE_CONSENT_ORIGINAL_ONLY.md",
     "LICENSE_FAMILIAR.txt",
