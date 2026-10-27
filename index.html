@@ -1,80 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ARKHE ZERO - TOLUCA-GLOBAL</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>ARKHSYMBIKROVOXAVORKR - ARKHE ZERO</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{background:#0a0a0f;color:#e5e5e5;font-family:system-ui;padding:20px;min-height:100vh}
-.header{border:1px solid #2a2a3a;padding:20px;border-radius:16px;margin-bottom:20px;background:linear-gradient(135deg,#1a1a2e,#0f0f1a)}
-.logo{font-family:monospace;white-space:pre;line-height:1.1;font-size:12px;color:#7c3aed}
-.grid{display:grid;grid-template-columns:1fr;gap:12px;max-width:600px;margin:0 auto}
-.card{border:1px solid #2a2a3a;padding:16px;border-radius:12px;background:#15151f;text-decoration:none;color:inherit;display:block}
-.card:hover{border-color:#7c3aed;background:#1c1c2a}
-.card b{color:#7c3aed;display:block;margin-bottom:4px}
-.card small{color:#888}
-.status{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-.tag{background:#1a1a2e;border:1px solid #2a2a3a;padding:4px 8px;border-radius:20px;font-size:11px}
-.tag.ok{border-color:#10b981;color:#10b981}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#08080f;color:#e8e8f0;font-family:'Space Grotesk',system-ui;min-height:100vh;overflow-x:hidden;position:relative}
+body::before{content:'';position:fixed;inset:0;background:
+radial-gradient(600px at 10% 20%, rgba(124,58,237,0.15), transparent),
+radial-gradient(800px at 90% 80%, rgba(6,182,212,0.12), transparent),
+radial-gradient(500px at 50% 50%, rgba(236,72,153,0.08), transparent);pointer-events:none;z-index:-1}
+.top{padding:18px 20px 0;max-width:560px;margin:0 auto}
+.logo-mark{font-family:'JetBrains Mono';font-size:28px}
+.title{font-size:32px;font-weight:800;letter-spacing:-0.5px;line-height:0.9;margin:12px 0 0;background:linear-gradient(90deg,#a78bfa 0%,#7dd3fc 50%,#22d3ee 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{color:#9ca3af;font-size:15px;margin:10px 0 22px}
+.card{background:rgba(18,18,28,0.9);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:20px 18px;margin:16px auto;max-width:560px;backdrop-filter:blur(20px)}
+.card h2{font-size:18px;letter-spacing:0.8px;font-weight:700;color:#e5e7ff;margin-bottom:12px}
+.card p{color:#9ca3af;font-size:14px;line-height:1.5}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 16px}
+.badge{font-family:'JetBrains Mono';font-size:11px;padding:5px 10px;border-radius:20px;border:1px solid}
+.badge.green{color:#10b981;border-color:rgba(16,185,129,0.4);background:rgba(16,185,129,0.08)}
+.badge.cyan{color:#22d3ee;border-color:rgba(34,211,238,0.4);background:rgba(34,211,238,0.08)}
+.badge.pink{color:#ec4899;border-color:rgba(236,72,153,0.4);background:rgba(236,72,153,0.08)}
+.btn{width:100%;padding:16px;border:none;border-radius:14px;font-size:16px;font-weight:700;color:white;cursor:pointer;background:linear-gradient(135deg,#a855f7 0%,#7c3aed 30%,#06b6d4 100%);box-shadow:0 8px 24px rgba(124,58,237,0.3)}
+.footer{text-align:center;padding:24px 0 40px;color:#4b5563;font-size:12px}
+.status-row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 0}
+.status-tag{font-family:'JetBrains Mono';font-size:10px;padding:4px 8px;border-radius:20px;border:1px solid #2a2a4a;background:#151528;color:#8b8db8}
 </style>
 </head>
 <body>
-<div class="header" style="max-width:600px;margin:0 auto 20px">
-<div class="logo">  █████╗ ██████╗ ██╗  ██╗██╗  ██╗███████╗
- ██╔══██╗██╔══██╗██║ ██╔╝██║  ██║██╔════╝  ZERO
- ███████║██████╔╝█████╔╝ ███████║█████╗
- ██╔══██║██╔══██╗██╔═██╗ ██╔══██║██╔══╝
- ██║  ██║██║  ██║██║  ██╗██║  ██║███████╗
- TOLUCA-GLOBAL | 1330 FILES | 51%H 49%AI
- manifest:e8d9eac8 | ARKHE-ZERO-TOLUCA</div>
-<div class="status">
-<span class="tag ok">■ Bus Toluca->CDMX 23:47</span>
-<span class="tag ok">■ 122 verificados</span>
-<span class="tag ok">■ Kintsugi activo</span>
-<span class="tag ok">■ KYBER/DILITHIUM</span>
-<span class="tag ok">■ 51%H 49%IA</span>
+<div class="top">
+<div class="logo-mark">○_•</div>
+<div class="title">ARKHSYMBIKROVOXAVORKR</div>
+<div class="subtitle">El legado no se hereda. Se firma.</div>
+<div class="status-row">
+<span class="status-tag" style="color:#10b981;border-color:#10b981">● LIVE</span>
+<span class="status-tag">SEALED_BY MARCO</span>
+<span class="status-tag">51% HUMANO 49% IA</span>
+<span class="status-tag">TOLUCA-GLOBAL-e8d9eac8</span>
 </div>
 </div>
-
-<div class="grid">
-<a class="card" href="apps/portal/voz-original.html">
-<b>🎙️ BÓVEDA DE VOZ ORIGINAL</b>
-<small>Graba tu voz real, sella con SHA256, hereda a familia. NO CLONACIÓN. ORIGINAL_ONLY_NO_CLONE</small>
-</a>
-
-<a class="card" href="[STRIPPED 74 bytes].md">
-<b>📖 Arquitectura Voz Original</b>
-<small>Por qué NO clonamos. Diferencia vs ElevenLabs. Anti-malware.</small>
-</a>
-
-<a class="card" href="[STRIPPED 77 bytes].md">
-<b>⚖️ Consentimiento Legal</b>
-<small>LFPDPPP MX, GDPR, California AB-362. Te blinda contra demandas.</small>
-</a>
-
-<a class="card" href="[STRIPPED 66 bytes].txt">
-<b>👨‍👩‍👧 Licencia Familiar</b>
-<small>Herencia $99/año. Bien inmaterial familiar.</small>
-</a>
-
-<a class="card" href="ARKHSYMBIKROVOXAVORKRA_DEFINITIVO_UNIFICADO/dist/sbom.json">
-<b>📦 SBOM CycloneDX - 122 archivos</b>
-<small>Master: f8e75403... | Espacio: ARKHE-ZERO-TOLUCA | Listo para Storacha</small>
-</a>
-
-<a class="card" href="https://github.com/Marcorojas17/ARKHSYMBIKROVOXAVORKRA">
-<b>🐙 【entity-GitHub¦canonical_name=GitHub】 - Fuente completa</b>
-<small>1330 files + _LEGACY_RECUPERADO + estructura definitiva sin borrar nada</small>
-</a>
-
-<div class="card" style="background:#0f0f1a">
-<b>🚀 Comandos</b>
-<small style="font-family:monospace;display:block;margin-top:8px;line-height:1.6">
-bash install.sh → levanta todo<br>
-python server.py → portal en :3001<br>
-cloudflared tunnel --url http://localhost:3001 → URL pública
-</small>
+<div class="card">
+<h2>PRESERVACION DE VOZ</h2>
+<p>Graba la voz de tus seres queridos. Cada grabación recibe un hash SHA-256 único.</p>
+<div class="badges">
+<span class="badge green">SHA-256</span>
+<span class="badge cyan">LOCAL</span>
+<span class="badge pink">ANTI-TRAINING</span>
 </div>
+<button class="btn" onclick="location.href='apps/portal/voz-original.html'">Grabar voz</button>
 </div>
-
+<div class="card">
+<h2>BOVEDA FAMILIAR</h2>
+<p style="color:#6b7280;font-size:14px">Aún no hay voces guardadas.</p>
+</div>
+<div class="card">
+<h2>LICENCIAS</h2>
+<ul style="list-style:none;margin-top:8px">
+<li style="color:#9ca3af;font-size:13px">• Global Propietaria (uso exclusivo titular)</li>
+<li style="color:#9ca3af;font-size:13px">• Familiar Limitada (uso privado)</li>
+</ul>
+</div>
+<div class="footer">© 2026 Marco Antonio Rojas Valdovinos</div>
 </body>
 </html>
