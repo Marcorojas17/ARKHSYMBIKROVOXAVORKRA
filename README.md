@@ -1,7 +1,10 @@
+
 ```bash
 cd ~/ARKHSYMBIKROVOXAVORKRA
-cat > README.md << 'KRONOS_EOF'
-<div align="center">
+python3 << 'PYEOF'
+from pathlib import Path
+
+readme = """<div align="center">
 
 ```text
 ██╗  ██╗██████╗  ██████╗ ███╗   ██╗ ██████╗ ███████╗
@@ -215,24 +218,11 @@ https://img.shields.io/badge/GPG-0093DD?style=for-the-badge&logo=gnuprivacyguard
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
-KRONOS_EOF
-echo "✅ B1 · $(wc -l < README.md) líneas"
-
-```
-
 ---
 
-## 📦 BLOQUE 2 — Kintsugi + PI + Soberanía + Footer
+◢ FIRMA KINTSUGI
 
-```bash
-cd ~/ARKHSYMBIKROVOXAVORKRA
-cat >> README.md << 'KRONOS_EOF'
-
----
-
-## ◢ FIRMA KINTSUGI
-
-**Sello visual-criptográfico de hoy.** La grieta dorada es única por archivo: si un byte cambia, el patrón cambia y se ve a simple vista.
+Sello visual-criptográfico de hoy. La grieta dorada es única por archivo: si un byte cambia, el patrón cambia y se ve a simple vista.
 
 ```text
 ═══════════════════════════════════════════════════════════════════
@@ -407,5 +397,10 @@ https://visitor-badge.laobi.icu/badge?page_id=Marcorojas17.Marcorojas17&color=8b
   Hash del README: ver README.md.kintsugi
 -->
 
-KRONOS_EOF
-echo "✅ B2 · Total: $(wc -l < README.md) líneas · $(grep -c '!\[' README.md) badges"
+"""
+
+Path('README.md').write_text(readme, encoding='utf-8')
+print(f'✅ README.md creado: {len(readme)} caracteres, {readme.count(chr(10))+1} líneas')
+PYEOF
+
+```
