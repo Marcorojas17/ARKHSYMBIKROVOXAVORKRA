@@ -1,17 +1,11 @@
 {
-  "version": "1.0.0",
-  "status": "PENDING",
-  "description": "Prueba de existencia pendiente de anclaje en Ethereum",
-  "target_network": "Ethereum Mainnet",
-  "contract_address": null,
-  "tx_hash": null,
-  "block_number": null,
-  "timestamp": null,
-  "instructions": [
-    "1. Desplegar Anchor.sol en Remix IDE",
-    "2. Copiar contract_address aquí",
-    "3. Llamar register(hash, cid) con el master_hash de seal.js",
-    "4. Copiar tx_hash y block_number aquí",
-    "5. Guardar este archivo actualizado en el repo privado"
-  ]
+  "network": "sepolia",
+  "contract_address": "0x...TU_CONTRACT_ADDRESS...",
+  "tx_hash": "0x...TU_TX_HASH...",
+  "block_number": 0,
+  "master_hash": "0x2d41cd6330eba4f2c09e037b8e9e19ba79322b416eaeb397d5204e4f2a18cba3",
+  "vault_sha256": "77a473e965d0337224b1a656dedbce103bbd6a5e66096425c5aa56fa82ba9382",
+  "ipfs_cid": "QmNXN4oMkWd4yaFCPGjrW5D4DgrDNLjYHyFNpWNC4owxR6",
+  "anchored_at": "2026-10-26T22:22:23-06:00",
+  "etherscan_url": "https://sepolia.etherscan.io/tx/0x...TU_TX_HASH..."
 }
