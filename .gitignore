@@ -1,6 +1,46 @@
+# Dependencias
 node_modules/
-.env
-.arkh/
-data-room/
+.pnp
+.pnp.js
+
+# Build / Dist
 dist/
+build/
+out/
+.vercel/
+.next/
+
+# Entorno
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Core ARKH
+.arkh/vault.arkh
+.arkh/identity.seed
+.arkh/quantum_nonce.qn
+.arkh/logs/
+.arkh/tls/
+
+# Data Room
+data-room/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 *.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+.nyc_output/
+
+# Documentos temporales
+*.pdf.tmp
+*.tsr.tmp
