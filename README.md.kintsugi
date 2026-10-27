@@ -4,14 +4,14 @@
   "file": "README.md",
   "content_hash": "sha256:caf398920c2a4d008d7b15c919b57215a9c831780961f7c5f388f7fd56b5b473",
   "content_size": 14911,
-  "timestamp": "2026-10-27T11:16:50.195Z",
+  "timestamp": "2026-10-27T11:33:35.974Z",
   "golden_crack": [
-    "▓▓▒▓▓▓▒..▒..",
-    "▒▒▒▓▒▒.▒░▓▒▒",
-    "▓▒..░.▓▓.▓▓▒",
-    "░▒.░░▒..▓▒.▒",
-    "░▓▓░.▓.▓░▒▒▓"
+    "░▓░░▒▒...▒▓.",
+    "░░▒.░▒.▒▓.▓.",
+    "▓...▓░▒▓.▓.▒",
+    "░▒..▒▒▒▓..▓░",
+    "░▓░░.░▒.▓░.▓"
   ],
-  "gold_hash": "sha256:dd9ffda22b10a9be890a4f88cb3173de3dda69375a23ea3b6cd50e0e589cf514",
-  "witness": "sha256:9e90225cba32294ac07553d8e833e54da4a97f1a39e266d48551ceb95a938123"
+  "gold_hash": "sha256:5f46a90309f25491591ac0c2e311e78d2d095b228b9c11f54c5517a0e42dbf8f",
+  "witness": "sha256:0dc718d3b2b0bd84b012defe8da1ed8981b236e6d34099411c07eca28e034e33"
 }
