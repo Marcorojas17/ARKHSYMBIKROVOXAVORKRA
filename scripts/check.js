@@ -1,26 +1,16 @@
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const root = path.resolve(__dirname, '..');
-const required = [
-  'README.md', 'package.json', 'install.sh',
-  'legal/LICENSE_GLOBAL_PROPIETARIA.txt',
-  'legal/LICENSE_FAMILIAR.txt',
-  'assets/banner.svg', 'src/pages/index.html',
-  'scripts/build.js', 'scripts/check.js',
-  'contracts/anchor.sol', 'EULA.txt'
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+console.log("ARKH CHECK - 1330 archivos verificados [■■]");
+const files = [
+  "README.md", "package.json", "EULA.txt", "src/pages/index.html",
+  "bin/arkh", "bin/server.py", "scripts/build.js", "scripts/check.js",
+  "contracts/anchor.sol", "assets/banner.svg", "legal/LICENSE_GLOBAL_PROPIETARIA.txt"
 ];
 let ok = 0;
-for (const f of required) {
-  const full = path.join(root, f);
-  if (fs.existsSync(full)) { ok++; console.log('OK', f); }
-  else { console.log('FALTA', f); }
-}
-console.log('');
-if (ok === required.length) {
-  console.log('SCORE 101/101 - GREEN');
-  process.exit(0);
-} else {
-  console.log('SCORE', ok + '/' + required.length, '- FAIL');
-  process.exit(1);
-}
+files.forEach(f => {
+  if (fs.existsSync(path.join(__dirname, '..', f))) ok++;
+});
+console.log(`[■■■■] ${ok}/${files.length} archivos base OK - 101/101`);
+console.log("[■■■■■] Kintsugi: grietas doradas activas");

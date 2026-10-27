@@ -24,6 +24,5 @@
     "serve": "^14.2.0"
   },
   "author": "Marco Antonio Rojas Valdovinos",
-  "license": "SEE LICENSE IN legal/LICENSE_GLOBAL_PROPIETARIA.txt",
-  "type": "module"
+  "license": "SEE LICENSE IN legal/LICENSE_GLOBAL_PROPIETARIA.txt"
 }

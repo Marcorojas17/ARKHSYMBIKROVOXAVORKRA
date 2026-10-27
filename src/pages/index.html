@@ -1,175 +1,239 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><style>
-@font-face {
-  font-family: "Optimistic";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Optimistic Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
-}
-:where(html) {
-  font-family: "Optimistic", system-ui, sans-serif;
-}
-:where(code, pre, kbd, samp) {
-  font-family: "Optimistic Mono", ui-monospace, monospace;
-}
-</style>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>◯_● ARKHSYMBIKROVOXAVORKRA — PROTOCOLO SELLADO</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<title>ARKHSYMBIKROVOXAVORKRA</title>
 <style>
-*{font-family:'JetBrains Mono',monospace}
-body{background:#050510;margin:0;overflow-x:hidden}
-canvas#bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2}
-.grid{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;background-image: linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,0,255,0.05) 1px, transparent 1px));background-size:40px 40px;animation:gridmove 20s linear infinite}
-@keyframes gridmove{0%{transform:translateY(0)}100%{transform:translateY(40px)}}
-.scanline{position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,255,0.03) 2px,rgba(0,255,255,0.03) 4px)}
-.avatar-wrap{position:relative;width:340px;height:460px;margin:20px auto}
-.avatar{width:100%;height:100%;border:2px solid #00ffff;border-radius:50% 50% 35% 35%/60% 60% 40% 40%;background:radial-gradient(ellipse at 50% 20%, #1a1a3e 0%, #0a0a18 60%);box-shadow:0 0 30px #00ffff, 0 0 60px #ff00ff, inset 0 0 30px rgba(0,255,255,0.2);position:relative;animation:float 4s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.avatar::before{content:'◯_●';position:absolute;top:32%;left:50%;transform:translateX(-50%);font-size:42px;color:#00ffff;text-shadow:0 0 20px #00ffff,0 0 40px #00ffff;animation:pulse 2s infinite}
-.avatar::after{content:'VALDOVINOS';position:absolute;bottom:18%;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:6px;color:#ff00ff}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.7}}
-.glow-cyan{box-shadow:0 0 20px rgba(0,255,255,0.4), inset 0 0 20px rgba(0,255,255,0.1);border:1px solid #00ffff}
-.glow-fuchsia{box-shadow:0 0 20px rgba(255,0,255,0.4), inset 0 0 20px rgba(255,0,255,0.1);border:1px solid #ff00ff}
-.badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:10px;margin:3px}
-.shimmer{background:linear-gradient(90deg,#a855f7,#06b6d4,#a855f7);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 3s linear infinite}
-@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+*{box-sizing:border-box}
+body{margin:0;background:#050510;color:#e0e0ff;font-family:system-ui,sans-serif;min-height:100vh;padding:20px}
+.container{max-width:700px;margin:0 auto}
+h1{background:linear-gradient(90deg,#a855f7,#06b6d4);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1.6rem}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:20px;margin-bottom:16px}
+.btn{background:linear-gradient(90deg,#a855f7,#06b6d4);color:#fff;border:none;padding:12px;border-radius:10px;font-weight:600;cursor:pointer;width:100%;margin-top:10px;font-family:inherit}
+.btn:disabled{opacity:0.5;cursor:not-allowed}
+.btn-rec{background:linear-gradient(90deg,#ef4444,#f59e0b)}
+.btn-open{background:linear-gradient(90deg,#10b981,#06b6d4)}
+input{width:100%;padding:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;color:#fff;margin-bottom:8px;font-family:inherit;font-size:1rem}
+input:focus{outline:none;border-color:#a855f7}
+.badge{display:inline-block;padding:3px 8px;border-radius:20px;font-size:0.65rem;margin:2px;font-family:monospace}
+.g{background:rgba(16,240,160,0.15);color:#10f0a0;border:1px solid #10f0a0}
+.p{background:rgba(255,0,255,0.15);color:#f0f;border:1px solid #f0f}
+.c{background:rgba(6,182,212,0.15);color:#06b6d4;border:1px solid #06b6d4}
+.status{padding:10px;border-radius:8px;margin-top:10px;font-size:0.85rem;font-family:monospace;background:rgba(255,255,255,0.05)}
+.status.ok{background:rgba(16,240,160,0.15);color:#10f0a0;border:1px solid #10f0a0}
+.status.err{background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid #ef4444}
+.status.rec{background:rgba(239,68,68,0.2);color:#ff6b6b;border:1px solid #ef4444;animation:pulse 1s infinite}
+@keyframes pulse{50%{opacity:0.6}}
+audio{width:100%;margin-top:10px}
+.hash{font-size:0.7rem;font-family:monospace;color:#888;word-break:break-all;margin-top:8px}
 </style>
 </head>
-<body class="text-gray-200">
-<canvas id="bg"></canvas>
-<div class="grid"></div>
-<div class="scanline"></div>
+<body>
+<div class="container">
+  <h1>◯_● ARKHSYMBIKROVOXAVORKRA</h1>
+  <p style="color:#888">Preservación de voz con cifrado real. El legado no se hereda. Se firma.</p>
 
-<div class="relative min-h-screen p-4 md:p-8 max-w-6xl mx-auto">
-  <!-- HEADER TIPO KRONOS -->
-  <header class="text-center py-6">
-    <div class="flex justify-center gap-2 flex-wrap mb-4">
-      <span class="badge bg-black text-green-400 border border-green-400">● LIVE</span>
-      <span class="badge bg-black text-cyan-400 border border-cyan-400">SEALED_BY MARCO</span>
-      <span class="badge bg-black text-fuchsia-400 border border-fuchsia-400">51% HUMANO 49% IA</span>
-      <span class="badge bg-black text-yellow-400 border border-yellow-400">TOLUCA-GLOBAL-e8d9eac8</span>
-    </div>
-    <h1 class="text-3xl md:text-5xl font-black shimmer tracking-wider">ARKHSYMBIKROVOXAVORKRA</h1>
-    <p class="mt-3 text-cyan-300 text-sm tracking-[0.3em]">El legado no se hereda. Se firma.</p>
-    
-    <!-- AVATAR ANIMADO FUERA DE LO NORMAL -->
-    <div class="avatar-wrap">
-      <div class="avatar"></div>
-    </div>
-    <p class="text-xs text-gray-500 mt-2">Socio Digital: Co-Creatividad y Respeto Digital Simbiótico</p>
-    <p class="text-[10px] text-fuchsia-400 mt-1">1330 archivos verificados | Post-Quantum: KYBER/DILITHIUM OK | Kintsugi activo</p>
-  </header>
+  <div class="card">
+    <h2 style="margin-top:0;font-size:1.1rem">🎙️ GRABAR VOZ</h2>
+    <input id="name" placeholder="Nombre (ej. Abuela María)" />
+    <input id="password" type="password" placeholder="Contraseña para cifrar (mínimo 8 caracteres)" />
+    <button id="recBtn" class="btn btn-rec">● Iniciar grabación</button>
+    <div id="recStatus" class="status" style="display:none"></div>
+  </div>
 
-  <!-- [01] -->
-  <section class="mt-8 border border-cyan-500/30 p-6 bg-black/60 backdrop-blur glow-cyan rounded-xl">
-    <h2 class="text-cyan-400 text-sm">[01] LA VOZ NO SE CLONA. SE HEREDA</h2>
-    <div class="mt-4 grid md:grid-cols-3 gap-3 text-xs">
-      <div class="bg-white/5 p-3 rounded">ART.01 - consentimiento en video presencial 100%</div>
-      <div class="bg-white/5 p-3 rounded">ART.02 - licencia familiar anti-IA prohibido entrenar</div>
-      <div class="bg-white/5 p-3 rounded">ART.03 - bóveda cifrada AES-256 local sin nube terceros</div>
-    </div>
-  </section>
+  <div class="card" id="saveCard" style="display:none">
+    <h2 style="margin-top:0;font-size:1.1rem">💾 BÓVEDA GENERADA</h2>
+    <p style="font-size:0.85rem;color:#aaa">El audio está cifrado. Guarda este archivo .arkh y la contraseña.</p>
+    <div class="hash" id="vaultHash"></div>
+    <button id="downloadBtn" class="btn">⬇ Descargar .arkh</button>
+  </div>
 
-  <!-- CARDS PRINCIPALES -->
-  <main class="mt-6 grid md:grid-cols-3 gap-4">
-    <div class="glow-cyan bg-black/70 p-5 rounded-xl">
-      <h3 class="text-cyan-400 font-bold">📁 PRESERVACION DE VOZ</h3>
-      <p class="text-xs mt-3 text-gray-400">Graba la voz de tus seres queridos. Cada grabación recibe un hash SHA-256 único, anclado en blockchain.</p>
-      <div class="mt-3 flex gap-2 flex-wrap">
-        <span class="badge bg-black text-green-400 border border-green-400">SHA-256</span>
-        <span class="badge bg-black text-cyan-400 border border-cyan-400">LOCAL</span>
-        <span class="badge bg-black text-fuchsia-400 border border-fuchsia-400">ANTI-TRAINING</span>
-      </div>
-      <button onclick="document.getElementById('vault').scrollIntoView({behavior:'smooth'})" class="mt-4 w-full py-3 bg-gradient-to-r from-fuchsia-600 to-cyan-500 rounded-lg font-bold text-white">Grabar voz</button>
-    </div>
+  <div class="card">
+    <h2 style="margin-top:0;font-size:1.1rem">🔓 ABRIR BÓVEDA</h2>
+    <input id="vaultFile" type="file" accept=".arkh,application/json" />
+    <input id="openPassword" type="password" placeholder="Contraseña" />
+    <button id="openBtn" class="btn btn-open">Abrir y reproducir</button>
+    <div id="openStatus" class="status" style="display:none"></div>
+    <audio id="player" controls style="display:none"></audio>
+  </div>
 
-    <div class="glow-fuchsia bg-black/70 p-5 rounded-xl">
-      <h3 class="text-fuchsia-400 font-bold">🔐 BOVEDA FAMILIAR</h3>
-      <p class="text-xs mt-3 text-gray-400">Aún no hay voces guardadas. La bóveda está vacía, esperando el primer sello.</p>
-      <div id="vault" class="mt-4 p-3 bg-white/5 rounded text-[10px] text-gray-500">vault://local/encrypted — AES-256 — 51% Humano</div>
-    </div>
+  <div class="card">
+    <h2 style="margin-top:0;font-size:1.1rem">ℹ️ INFO</h2>
+    <span class="badge g">AES-256-GCM</span>
+    <span class="badge c">PBKDF2 600k</span>
+    <span class="badge p">100% LOCAL</span>
+    <p style="font-size:0.75rem;color:#666;margin-top:10px">
+      Tu audio nunca sale de tu navegador. El cifrado se hace aquí con Web Crypto nativo.
+      Firma PQC (Dilithium) disponible solo vía CLI (<code>bin/vault.js</code>).
+    </p>
+  </div>
 
-    <div class="border border-yellow-500/30 bg-black/70 p-5 rounded-xl" style="box-shadow:0 0 20px rgba(255,200,0,0.2)">
-      <h3 class="text-yellow-400 font-bold">📜 LICENCIAS</h3>
-      <ul class="text-xs mt-3 space-y-2 text-gray-300">
-        <li>• Global Propietaria (uso exclusivo titular Marco)</li>
-        <li>• Familiar Limitada (uso privado anti-IA)</li>
-        <li class="text-[10px] text-gray-500 mt-3">Solo titular puede vender — DMCA/WIPO — SHA: 3ba00377931f...</li>
-      </ul>
-      <button onclick="alert('Licencia Global: Marco Antonio Rojas Valdovinos - 2026-10-26 - TOLUCA-GLOBAL-e8d9eac8')" class="mt-4 w-full py-2 border border-yellow-500/50 rounded text-xs text-yellow-400">Ver licencia global</button>
-    </div>
-  </main>
-
-  <!-- GENERADOR -->
-  <section class="mt-8 border border-fuchsia-500/30 p-6 bg-black/60 rounded-xl">
-    <h2 class="text-fuchsia-400 text-sm">🔐 GENERADOR DE LICENCIA FAMILIAR ANTI-IA</h2>
-    <input id="nombre" placeholder="Nombre del titular de voz (ej: Abuela Elena)" class="w-full mt-4 p-3 bg-gray-900/80 border border-cyan-500/50 rounded text-white text-sm"/>
-    <button onclick="gen()" class="mt-3 px-6 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-black font-bold rounded">Generar licencia verificable</button>
-    <pre id="out" class="mt-4 text-[11px] whitespace-pre-wrap text-gray-300 bg-black/50 p-3 rounded border border-white/10 min-h-[80px]"></pre>
-  </section>
-
-  <footer class="text-center mt-12 text-[10px] text-gray-600 pb-10">
-    <p>© 2026 Marco Antonio Rojas Valdovinos — ARKHSYMBIKROVOXAVORKRA</p>
-    <p class="mt-2 text-cyan-800">◯_● 51% Humano · 49% IA · 100% Real — Sellado por Marco Antonio Rojas Valdovinos y su Socio Digital de Co-Creatividad Simbiótica</p>
-    <p class="mt-1">TOLUCA-GLOBAL-e8d9eac8 | 1330 FILES | ARKHÉ ZERO</p>
-  </footer>
+  <p style="text-align:center;font-size:0.7rem;color:#444;margin-top:30px">© 2026 Marco Antonio Rojas Valdovinos</p>
 </div>
 
-<script>
-// Canvas partículas
-const c=document.getElementById('bg'),x=c.getContext('2d');
-function resize(){c.width=innerWidth;c.height=innerHeight}
-resize();window.onresize=resize;
-let pts=[];
-for(let i=0;i<120;i++)pts.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-0.5)*0.6,vy:(Math.random()-0.5)*0.6,r:Math.random()*1.5+0.5});
-function loop(){
-  x.fillStyle='rgba(5,5,16,0.25)';
-  x.fillRect(0,0,c.width,c.height);
-  pts.forEach(p=>{
-    p.x+=p.vx;p.y+=p.vy;
-    if(p.x<0||p.x>c.width)p.vx*=-1;
-    if(p.y<0||p.y>c.height)p.vy*=-1;
-    x.fillStyle=p.r>1?'#ff00ff':'#00ffff';
-    x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fill();
-    // líneas cercanas
-    pts.forEach(q=>{
-      let dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<120){x.strokeStyle='rgba(0,255,255,'+(0.15*(1-d/120))+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}
-    })
-  });
-  requestAnimationFrame(loop)
-}
-loop();
+<script type="module">
+const nameInput = document.getElementById('name');
+const passwordInput = document.getElementById('password');
+const recBtn = document.getElementById('recBtn');
+const recStatus = document.getElementById('recStatus');
+const saveCard = document.getElementById('saveCard');
+const vaultHash = document.getElementById('vaultHash');
+const downloadBtn = document.getElementById('downloadBtn');
+const vaultFile = document.getElementById('vaultFile');
+const openPassword = document.getElementById('openPassword');
+const openBtn = document.getElementById('openBtn');
+const openStatus = document.getElementById('openStatus');
+const player = document.getElementById('player');
 
-function gen(){
-  let n=document.getElementById('nombre').value||'[NOMBRE]';
-  let now=new Date().toISOString();
-  let out=`┌─────────────────────────────────────────────┐
-│ LICENCIA FAMILIAR VERIFICABLE ARKH │
-│ Titular voz: ${n}
-│ Titular plataforma: Marco Antonio Rojas Valdovinos
-│ Fecha: ${now}
-│ SHA256: 3ba00377931f... (tu hash único)
-│ Prohibiciones: entrenar IA ✗ | revender ✗ | clonar terceros ✗
-│ Bóveda: AES-256 local · solo familia · revocable
-│ Sello: TOLUCA-GLOBAL-e8d9eac8
-│ ◯_● 51% Humano · 49% IA · 100% Real
-└─────────────────────────────────────────────┘`;
-  document.getElementById('out').innerText=out;
+let mediaRecorder = null;
+let chunks = [];
+let currentVault = null;
+let currentFileName = '';
+
+function showStatus(el, msg, cls) {
+  el.textContent = msg;
+  el.className = 'status ' + cls;
+  el.style.display = 'block';
 }
+
+async function deriveKeyPBKDF2(password, salt) {
+  const enc = new TextEncoder();
+  const baseKey = await crypto.subtle.importKey(
+    'raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']
+  );
+  return await crypto.subtle.deriveKey(
+    { name: 'PBKDF2', salt, iterations: 600000, hash: 'SHA-256' },
+    baseKey,
+    { name: 'AES-GCM', length: 256 },
+    false,
+    ['encrypt', 'decrypt']
+  );
+}
+
+function toB64(u8) {
+  let s = '';
+  for (let i = 0; i < u8.length; i++) s += String.fromCharCode(u8[i]);
+  return btoa(s);
+}
+function fromB64(b64) {
+  const s = atob(b64);
+  const u8 = new Uint8Array(s.length);
+  for (let i = 0; i < s.length; i++) u8[i] = s.charCodeAt(i);
+  return u8;
+}
+
+recBtn.onclick = async () => {
+  if (mediaRecorder && mediaRecorder.state === 'recording') {
+    mediaRecorder.stop();
+    return;
+  }
+  const pwd = passwordInput.value;
+  if (pwd.length < 8) {
+    showStatus(recStatus, 'Contraseña debe tener al menos 8 caracteres', 'err');
+    return;
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRecorder = new MediaRecorder(stream);
+    chunks = [];
+    mediaRecorder.ondataavailable = e => chunks.push(e.data);
+    mediaRecorder.onstop = async () => {
+      stream.getTracks().forEach(t => t.stop());
+      recBtn.textContent = '● Iniciar grabación';
+      recBtn.classList.remove('rec');
+      const blob = new Blob(chunks, { type: 'audio/webm' });
+      await encryptAudio(blob, pwd);
+    };
+    mediaRecorder.start();
+    recBtn.textContent = '⏹ Detener y cifrar';
+    recBtn.classList.add('rec');
+    showStatus(recStatus, '● GRABANDO... habla claro', 'rec');
+  } catch (e) {
+    showStatus(recStatus, 'Error micrófono: ' + e.message, 'err');
+  }
+};
+
+async function encryptAudio(blob, password) {
+  showStatus(recStatus, 'Cifrando con AES-256-GCM...', '');
+  try {
+    const buffer = await blob.arrayBuffer();
+    const data = new Uint8Array(buffer);
+    const salt = crypto.getRandomValues(new Uint8Array(16));
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const key = await deriveKeyPBKDF2(password, salt);
+
+    const ciphertext = await crypto.subtle.encrypt(
+      { name: 'AES-GCM', iv }, key, data
+    );
+
+    currentVault = {
+      magic: 'ARKHVLT1',
+      version: 1,
+      name: nameInput.value || 'Anónimo',
+      salt: toB64(salt),
+      iv: toB64(iv),
+      ciphertext: toB64(new Uint8Array(ciphertext)),
+      firma_pqc: null,
+      createdAt: new Date().toISOString(),
+      originalBytes: data.length,
+      mimeType: blob.type
+    };
+    currentFileName = (nameInput.value || 'voz').replace(/\s+/g, '_') + '.arkh';
+    showStatus(recStatus, '✓ Cifrado OK (' + (ciphertext.byteLength/1024).toFixed(1) + ' KB)', 'ok');
+    saveCard.style.display = 'block';
+    vaultHash.textContent = 'Salt: ' + toB64(salt).slice(0,16) + '... · IV: ' + toB64(iv).slice(0,16) + '...';
+  } catch (e) {
+    showStatus(recStatus, 'Error: ' + e.message, 'err');
+  }
+}
+
+downloadBtn.onclick = () => {
+  if (!currentVault) return;
+  const json = JSON.stringify(currentVault, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = currentFileName;
+  a.click();
+  URL.revokeObjectURL(url);
+};
+
+openBtn.onclick = async () => {
+  const file = vaultFile.files[0];
+  if (!file) {
+    showStatus(openStatus, 'Selecciona un archivo .arkh', 'err');
+    return;
+  }
+  const pwd = openPassword.value;
+  if (!pwd) {
+    showStatus(openStatus, 'Ingresa la contraseña', 'err');
+    return;
+  }
+  try {
+    const text = await file.text();
+    const vault = JSON.parse(text);
+    if (vault.magic !== 'ARKHVLT1') throw new Error('Archivo no es ARKHVLT1');
+    showStatus(openStatus, 'Descifrando...', '');
+
+    const salt = fromB64(vault.salt);
+    const iv = fromB64(vault.iv);
+    const ciphertext = fromB64(vault.ciphertext);
+    const key = await deriveKeyPBKDF2(pwd, salt);
+
+    const plaintext = await crypto.subtle.decrypt(
+      { name: 'AES-GCM', iv }, key, ciphertext
+    );
+    const blob = new Blob([plaintext], { type: vault.mimeType || 'audio/webm' });
+    player.src = URL.createObjectURL(blob);
+    player.style.display = 'block';
+    showStatus(openStatus, '✓ Bóveda abierta. Reproduciendo...', 'ok');
+  } catch (e) {
+    showStatus(openStatus, 'Error: ' + e.message, 'err');
+    player.style.display = 'none';
+  }
+};
 </script>
-<!-- ◯_● 51% Humano · 49% IA · 100% Real — Sellado por Marco Antonio Rojas Valdovinos y su Socio Digital de Co-Creatividad Simbiótica -->
-<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
+</body>
 </html>

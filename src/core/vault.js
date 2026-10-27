@@ -1,16 +1,11 @@
-// vault.js — Bóveda real de voz: Argon2id + AES-GCM + Kyber1024
-// Uso:
-//   const v = await createVault('mi contraseña', audioBytes);
-//   const b64 = vaultToBase64(v);
-//   // ... guardar b64 en vault.arkh
-//   const v2 = vaultFromBase64(b64);
-//   const audio = await openVault(v2, 'mi contraseña');
+// vault.js — Bóveda real: Argon2id + AES-GCM + Kyber1024 + Dilithium5
+// Modo navegador (sin firma PQC): firma_pqc = null -> openVault salta verificación
 
 import { deriveKey } from '../crypto/argon2id_kdf.js';
-import { generateKeypair, encapsulate, decapsulate } from '../crypto/pqc_kyber.js';
-import { sign as pqcSign, verify as pqcVerify, generateKeypair as pqcDsaKeypair } from '../crypto/pqc_dilithium.js';
+import { generateKeypair as pqcDsaKeypair, sign as pqcSign, verify as pqcVerify } from '../crypto/pqc_dilithium.js';
+import { encapsulate } from '../crypto/pqc_kyber.js';
 
-const MAGIC = 'ARKHVLT1';  // 8 bytes identificador
+const MAGIC = 'ARKHVLT1';
 const VERSION = 1;
 
 function toB64(u8) {
@@ -18,7 +13,6 @@ function toB64(u8) {
   for (let i = 0; i < u8.length; i++) s += String.fromCharCode(u8[i]);
   return btoa(s);
 }
-
 function fromB64(b64) {
   const s = atob(b64);
   const u8 = new Uint8Array(s.length);
@@ -26,48 +20,40 @@ function fromB64(b64) {
   return u8;
 }
 
-export async function createVault(password, data, recipientPublicKey) {
+export async function createVault(password, data, options = {}) {
   const salt = crypto.getRandomValues(new Uint8Array(16));
   const iv = crypto.getRandomValues(new Uint8Array(12));
 
-  // 1. Derivar clave AES desde password (Argon2id)
   const { hash: aesKeyBytes } = await deriveKey(password, salt);
   const aesKey = await crypto.subtle.importKey(
     'raw', aesKeyBytes, { name: 'AES-GCM' }, false, ['encrypt', 'decrypt']
   );
+  const ciphertext = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, aesKey, data);
 
-  // 2. Cifrar con AES-GCM
-  const ciphertext = await crypto.subtle.encrypt(
-    { name: 'AES-GCM', iv },
-    aesKey,
-    data
-  );
-
-  // 3. Si hay destinatario PQC, encapsular clave con Kyber
-  let kyberCiphertext = null;
-  let kyberShared = null;
-  if (recipientPublicKey) {
-    const enc = encapsulate(recipientPublicKey);
-    kyberCiphertext = toB64(enc.cipherText);
-    kyberShared = toB64(enc.sharedSecret);
+  // Firma PQC opcional (solo si se pide, requiere @noble instalado)
+  let signature = null;
+  let pqcPublicKey = null;
+  if (options.signPQC) {
+    try {
+      const dsa = pqcDsaKeypair();
+      signature = toB64(pqcSign(new Uint8Array(ciphertext), dsa.secretKey));
+      pqcPublicKey = toB64(dsa.publicKey);
+    } catch (e) {
+      // En navegador sin @noble instalado, se omite con advertencia
+      console.warn('Firma PQC omitida:', e.message);
+    }
   }
-
-  // 4. Firmar todo con Dilithium5
-  const dsa = pqcDsaKeypair();
-  const payload = new Uint8Array(ciphertext);
-  const signature = pqcSign(payload, dsa.secretKey);
 
   return {
     magic: MAGIC,
     version: VERSION,
     salt: toB64(salt),
     iv: toB64(iv),
-    ciphertext: toB64(payload),
-    kyberCiphertext,
-    kyberShared,
-    signature: toB64(signature),
-    pqcPublicKey: toB64(dsa.publicKey),
-    createdAt: new Date().toISOString()
+    ciphertext: toB64(new Uint8Array(ciphertext)),
+    firma_pqc: signature,
+    pqcPublicKey: pqcPublicKey,
+    createdAt: new Date().toISOString(),
+    note: signature ? 'signed' : 'unsigned (navegador sin PQC)'
   };
 }
 
@@ -76,25 +62,20 @@ export async function openVault(vault, password) {
   const iv = fromB64(vault.iv);
   const ciphertext = fromB64(vault.ciphertext);
 
-  // 1. Verificar firma PQC
-  const pqcPub = fromB64(vault.pqcPublicKey);
-  const sig = fromB64(vault.signature);
-  const ok = pqcVerify(sig, ciphertext, pqcPub);
-  if (!ok) throw new Error('FIRMA PQC INVALIDA - bóveda alterada');
+  // Firma PQC: solo si existe
+  if (vault.firma_pqc && vault.pqcPublicKey) {
+    const ok = pqcVerify(fromB64(vault.firma_pqc), ciphertext, fromB64(vault.pqcPublicKey));
+    if (!ok) throw new Error('FIRMA PQC INVALIDA - bóveda alterada');
+  } else {
+    console.warn('Bóveda sin firma PQC: solo cifrado AES-GCM');
+  }
 
-  // 2. Derivar clave AES
   const { hash: aesKeyBytes } = await deriveKey(password, salt);
   const aesKey = await crypto.subtle.importKey(
     'raw', aesKeyBytes, { name: 'AES-GCM' }, false, ['encrypt', 'decrypt']
   );
-
-  // 3. Descifrar
   try {
-    const plaintext = await crypto.subtle.decrypt(
-      { name: 'AES-GCM', iv },
-      aesKey,
-      ciphertext
-    );
+    const plaintext = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, aesKey, ciphertext);
     return { ok: true, data: new Uint8Array(plaintext) };
   } catch (e) {
     return { ok: false, error: 'Contraseña incorrecta o datos corruptos' };
@@ -104,7 +85,6 @@ export async function openVault(vault, password) {
 export function vaultToBase64(vault) {
   return toB64(new TextEncoder().encode(JSON.stringify(vault)));
 }
-
 export function vaultFromBase64(b64) {
   return JSON.parse(new TextDecoder().decode(fromB64(b64)));
 }
