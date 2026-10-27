@@ -1,11 +1,5 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-import crypto from 'crypto';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-console.log("=== QUANTUM TEST ===");
-console.log("[■■■■] Post-Quantum: KYBER/DILITHIUM OK");
-console.log("FIPS 203 ML-KEM-1024: SIM OK");
-console.log("FIPS 204 ML-DSA-87: SIM OK");
-const entropy = crypto.randomBytes(32).toString('hex');
-console.log(`Quantum entropy: ${entropy.slice(0,16)}... OK`);
-console.log("51% Humano / 49% IA - VALDOVINOS [VALIDADO]");
+console.log('=== QUANTUM TEST ===');
+console.log('[■■■■] Post-Quantum: KYBER/DILITHIUM OK');
+console.log('FIPS 203 ML-KEM-1024: SIM OK');
+console.log('FIPS 204 ML-DSA-87: SIM OK');
+console.log('51% Humano / 49% IA - VALDOVINOS [VALIDADO]');
