@@ -1,0 +1,18 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-26T00:00:00Z",
+    "component": {
+      "type": "application",
+      "name": "ARKHSYMBIKROVOXAVORKRA",
+      "version": "1.0.0"
+    }
+  },
+  "components": [
+    {"type": "library", "name": "serve", "version": "^14.2.0"},
+    {"type": "library", "name": "localtunnel", "version": "^2.0.2"}
+  ],
+  "note": "SBOM básico. Regenerar con: npm run sbom (cuando exista el script)"
+}

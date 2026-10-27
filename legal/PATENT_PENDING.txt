@@ -1,0 +1,34 @@
+REGISTRO DE INVENCIÓN SIMBÓLICA (PATENT PENDING)
+ARKHSYMBIKROVOXAVORKRA
+© 2026 Marco Antonio Rojas Valdovinos
+
+ESTADO: BORRADOR (no registrado aún)
+
+TÍTULO:
+"Protocolo de preservación vocal simbiótica con prueba criptográfica
+post-cuántica y licenciamiento anti-entrenamiento de IA"
+
+INVENTOR:
+Marco Antonio Rojas Valdovinos
+
+FECHA DE CONCEPCIÓN: 26 Oct 2026
+FECHA DE REDUCCIÓN A PRÁCTICA: 26 Oct 2026
+
+COMPONENTES NUEVOS:
+1. Combinación de bóveda cifrada + hash SHA-256 + anclaje Ethereum
+   para preservación de voz familiar
+2. Cláusula anti-training embebida en licencia familiar
+3. Firma doble ECDSA + ML-DSA en cada acción del agente
+
+PRÓXIMOS PASOS:
+[ ] Búsqueda de anterioridad (patent search)
+[ ] Redacción de solicitud
+[ ] Registro en IMPI (México) — costo estimado $15,000-30,000 MXN
+[ ] Registro PCT para protección internacional
+[ ] Asesoría con abogado de PI especializado
+
+ESTE DOCUMENTO NO CONSTITUYE REGISTRO LEGAL.
+Es solo un registro interno de fecha de concepción.
+
+Fecha: 26 Oct 2026
+Firma: Marco Antonio Rojas Valdovinos

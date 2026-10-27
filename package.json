@@ -6,12 +6,24 @@
     "build": "node scripts/build.js",
     "check": "node scripts/check.js",
     "serve": "npx serve dist -p 3000",
-    "live": "npx localtunnel --port 3000"
+    "live": "npx localtunnel --port 3000",
+    "seal": "node scripts/seal.js",
+    "harden": "node scripts/harden.js",
+    "quantum": "node scripts/quantum_test.js",
+    "status": "node scripts/check-status.js",
+    "defense": "node bin/server-defense.js",
+    "vault:test": "node bin/vault.js test",
+    "serve:py": "python3 bin/server.py",
+    "serve:tls": "python3 bin/server.py --tls"
   },
   "dependencies": {
-    "serve": "^14.2.0",
-    "localtunnel": "^2.0.2"
+    "@noble/hashes": "^2.4.0",
+    "@noble/post-quantum": "^0.7.1",
+    "argon2-browser": "^1.18.0",
+    "localtunnel": "^2.0.2",
+    "serve": "^14.2.0"
   },
   "author": "Marco Antonio Rojas Valdovinos",
-  "license": "SEE LICENSE IN legal/LICENSE_GLOBAL_PROPIETARIA.txt"
+  "license": "SEE LICENSE IN legal/LICENSE_GLOBAL_PROPIETARIA.txt",
+  "type": "module"
 }

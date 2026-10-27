@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-27T01:45:42.533Z",
+  "owner": "Marco Antonio Rojas Valdovinos",
+  "did": "did:kronos:human:marcorojas17",
+  "files": {
+    "src/pages/index.html": "04aadf8e98773b2b3ba3b5c3db34acc34d4b83112ed8d0322ea5a33c13e48f94",
+    "README.md": "cb7228c2c1a5a1c928dd24c310706005c7b994bf5ecce26f2576d7075cf65a3a",
+    "package.json": "17ae3ae0d79f3192a21bf9fa477e58d005cbcd87b2cdc3cd63ea253b0776aaa5",
+    "legal/LICENSE_GLOBAL_PROPIETARIA.txt": "a992ad0e4ddcaf221df16d3f818d5fde788ccee79167af9c2ee4d539a633df82",
+    "legal/LICENSE_FAMILIAR.txt": "0c5d8862d37ceedd686ec26cf3236018c6261a08b631c796007e7dd232a9b972",
+    "legal/LICENSE_PQC.txt": "f634b1fa6b8db6e11ed1e317400c7a8d77856015973acd030d470a7272c5e0e0"
+  },
+  "master_hash": "2d41cd6330eba4f2c09e037b8e9e19ba79322b416eaeb397d5204e4f2a18cba3"
+}
