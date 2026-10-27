@@ -2,11 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>ARKH Portal</title>
-    <style>body { background: #050510; color: white; font-family: sans-serif; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARKH Portal · Bóveda de Voz</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>◯_● ARKH Portal</h1>
-    <p>Bienvenido al ecosistema.</p>
+    <div class="container">
+        <header>
+            <h1>◯_● ARKH PORTAL</h1>
+            <p>Preservación de voz y legado digital inmutable.</p>
+        </header>
+        <main>
+            <div class="card">
+                <h2>🔐 Bóveda de Voz</h2>
+                <p>Graba tu voz, cífrala y guárdala como un activo digital.</p>
+                <button id="start-record">● Iniciar Grabación</button>
+                <button id="stop-record" disabled>⏹ Detener y Cifrar</button>
+                <div id="status"></div>
+            </div>
+        </main>
+    </div>
+    <script src="portal.js"></script>
 </body>
 </html>
