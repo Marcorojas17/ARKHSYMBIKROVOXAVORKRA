@@ -1,0 +1,3 @@
+# legal/LICENSE_ENTERPRISE.txt
+
+_Pendiente de implementacion._
