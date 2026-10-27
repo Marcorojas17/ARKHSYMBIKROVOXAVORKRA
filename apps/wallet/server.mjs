@@ -1,6 +1,7 @@
 import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { promptInjectionShield } from '../../src/defense/prompt_injection_shield.js';
 import { getWalletData } from './lib/wallet.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -12,6 +13,7 @@ const cache = new Map();
 const TTL = 30000;
 
 app.use((req, res, next) => {
+app.use(promptInjectionShield);
   console.log(`[${new Date().toISOString().slice(11,19)}] ${req.method} ${req.path}`);
   next();
 });
