@@ -1,3 +1,8 @@
-# contracts/tests/anchor.test.js
+// Test para Anchor.sol
+const { expect } = require("chai");
 
-_Pendiente de implementacion._
+describe("ArkheAnchor", function () {
+  it("Debería desplegarse correctamente", async function () {
+    // Lógica del test
+  });
+});

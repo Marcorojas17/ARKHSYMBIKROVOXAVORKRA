@@ -1,1 +1,2 @@
-console.log('Release script');
+// Script de Release
+console.log("🚀 Preparando release...");
