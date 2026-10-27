@@ -1,12 +1,631 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.5",
-  "version": 1,
-  "metadata": {
-    "component": {
-      "name": "arkh-enterprise",
-      "version": "1.0.0"
+  "project": "ARKHSYMBIKROVOXAVORKRA",
+  "space": "ARKHE-ZERO-TOLUCA",
+  "anchor": "ARKHE-ZERO-TOLUCA",
+  "email": "marco.a.rojas.v@hotmail.com",
+  "timestamp": "2026-10-27T15:26:12.233Z",
+  "masterHash": "f8e754032a192a924752652bc19cedf5bd33b85e0e8c04118978f72650667004",
+  "voiceVault": "ORIGINAL_ONLY_NO_CLONE - NO TTS",
+  "kintsugi": "grietas doradas activas - 51%H 49%AI - VALDOVINOS",
+  "manifest": "e8d9eac8",
+  "files": [
+    {
+      "file": "apps/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "apps/portal/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "apps/portal/components/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "apps/portal/components/audit-view.js",
+      "sha256": "e805b7afb98856e91f87d6e077b685a1363c9e69c4adcd733647851facdfc7d2",
+      "size": 25
+    },
+    {
+      "file": "apps/portal/components/vault-view.js",
+      "sha256": "4060008d58dc018863f835bcb8aa8520c2a7a5f89f0b745a2d45ccf5eafb5bb3",
+      "size": 25
+    },
+    {
+      "file": "apps/portal/i18n.js",
+      "sha256": "00f54103f33a920c1c0dd41b113629b64487ddce6bcb7f31de467ce586375e29",
+      "size": 20
+    },
+    {
+      "file": "apps/portal/index.html",
+      "sha256": "2beeaaee460f437164628619e22c98de881c59e221edd13f10e587e3cbee0e11",
+      "size": 46
+    },
+    {
+      "file": "apps/portal/multivault.js",
+      "sha256": "070d3328995bdf3a4ed90221b54903f4118cad0ee2f658152c80787743a931b1",
+      "size": 26
+    },
+    {
+      "file": "apps/portal/portal.js",
+      "sha256": "482c9ba179628f00f2246a95d241797fe8c3e30e2868dcd5963ade62643e6478",
+      "size": 22
+    },
+    {
+      "file": "apps/portal/qr.js",
+      "sha256": "1a159dc7ed16cb06f2e35d519ee89ad9a5f75e09e04d1208b9a0679cac205aab",
+      "size": 18
+    },
+    {
+      "file": "apps/portal/styles.css",
+      "sha256": "49d2b04cc62017a27fc6c438b441d8c04c8627aad87bf6508acd41345cbeba90",
+      "size": 29
+    },
+    {
+      "file": "apps/portal/voz-original.html",
+      "sha256": "15d49511664c9b5e50c0647a434daeb129c7a0d2278bfa1ac13c927d74b8894c",
+      "size": 2194
+    },
+    {
+      "file": "apps/server/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "apps/server/requirements.txt",
+      "sha256": "69260f1a588b9c6586ee124139ece1c30d60e919a12628108929836df224ece6",
+      "size": 15
+    },
+    {
+      "file": "apps/server/routes/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "apps/server/routes/auth.js",
+      "sha256": "55311a1282237af75a9da5134a55d397da8c0ee22a0362dda7aa0b1c84276fbc",
+      "size": 13
+    },
+    {
+      "file": "apps/server/routes/health.js",
+      "sha256": "c25234ef8910d036ff73bff10373c2cfa247b255a761947605529c4e352f26ed",
+      "size": 52
+    },
+    {
+      "file": "apps/server/routes/vault.js",
+      "sha256": "95ca310803bc653c22af5dcfa100721318151fa45c81c34b608f13db1f1bc467",
+      "size": 14
+    },
+    {
+      "file": "apps/server/routes/verification.js",
+      "sha256": "dc6767ec9862b06e58b56a0c7ad13e50c7477ad43c828c528dd8d0db90c1d347",
+      "size": 21
+    },
+    {
+      "file": "apps/server/server-defense.js",
+      "sha256": "cc90202033f59f1dd7058a5b66de344c5023ef86616ee76014852cda010f83cb",
+      "size": 23
+    },
+    {
+      "file": "apps/server/server.py",
+      "sha256": "4d70d34543dea4066af5f62452929c42c3a9aa24df23e1887fd0578a4e80d372",
+      "size": 15
+    },
+    {
+      "file": "apps/wallet/.env",
+      "sha256": "0fde99b707191bea2df4396777de2838cf4b60dd92670c0a510ae1b8b8dd517f",
+      "size": 38
+    },
+    {
+      "file": "apps/wallet/.envcd",
+      "sha256": "f8eeb815dc15ae7f3928918c862aaf0f834fd4df9c252d4c06d0f1e18bf5c920",
+      "size": 69
+    },
+    {
+      "file": "apps/wallet/.npmrc",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size": 1
+    },
+    {
+      "file": "apps/wallet/MANIFESTO.md",
+      "sha256": "694de06f0c0dbd8bfdab5a768528fdfaba2b38e0efd4a78f27f03e8b70a44cef",
+      "size": 2850
+    },
+    {
+      "file": "apps/wallet/api/wallet/[address].js",
+      "sha256": "0348f670e2704f8486ef109014569367d8c4a14bd470ad4c15a4224af029f830",
+      "size": 728
+    },
+    {
+      "file": "apps/wallet/lib/wallet.js",
+      "sha256": "b761157da99a9324683307ed295474047822712c955990cfe4d9a5cf26ba4df2",
+      "size": 2190
+    },
+    {
+      "file": "apps/wallet/ngrok-v3-stable-linux-arm64.tgz",
+      "sha256": "fb41ee8f251969f6e399ef03122f791ae537155dfd9ac4c0baf108aca95c17d7",
+      "size": 11043230
+    },
+    {
+      "file": "apps/wallet/package-lock.json",
+      "sha256": "0dfc644efc8cd934b76713d245a5174c46b8cbf5c3e23c3e31011bbec36270c7",
+      "size": 34225
+    },
+    {
+      "file": "apps/wallet/package.json",
+      "sha256": "8ae7ee52f59593a128b4459f765491a5f9f73d549e149b7756e9fcbdaaf7cda9",
+      "size": 422
+    },
+    {
+      "file": "apps/wallet/public/favicon.svg",
+      "sha256": "a687cf328f4b07bc1766b53a3c06733056fef5fe6ab16faab2b60f4f4a0dd611",
+      "size": 513
+    },
+    {
+      "file": "apps/wallet/public/index.html",
+      "sha256": "7ee7bf5973650df459d5c9abe17ecf79d3d28e55450a9a19ed67710eccb2175d",
+      "size": 5181
+    },
+    {
+      "file": "apps/wallet/public/manifest.json",
+      "sha256": "9ca45d052ba1ca0386f732c14c52e07405244d20eccc9247bc6de9df3c702ff8",
+      "size": 305
+    },
+    {
+      "file": "apps/wallet/public/sw.js",
+      "sha256": "45354df634854265c2d29b5a669518c50e0f4f6a55cfaeb68ab48db31ed17c17",
+      "size": 415
+    },
+    {
+      "file": "apps/wallet/server.mjs",
+      "sha256": "4261cec10750a8e7b772e6d7bd71c6a5166bd5c35064966f3c73004fe99e4473",
+      "size": 776
+    },
+    {
+      "file": "apps/wallet/server.mjs.kintsugi",
+      "sha256": "2ce9d577f0aeb1c58cf094cfcfaeee96ccbb7c5903d2addb95c452f957d0c362",
+      "size": 677
+    },
+    {
+      "file": "apps/wallet/vercel.json",
+      "sha256": "1199b0c724bf3306ba8abc827eb12bac14217108a909743158b25108459bceba",
+      "size": 134
+    },
+    {
+      "file": "docs/VOZ_ORIGINAL_ARQUITECTURA.md",
+      "sha256": "7050663814962e7494263e6c9232cb5aebea64c6f059d2a59a8402258463a469",
+      "size": 1082
+    },
+    {
+      "file": "legal/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "legal/CHAIN_OF_CUSTODY.json",
+      "sha256": "3b38669f251ad6e212c8b57da1fc815306f734a90920809117fdc7895ad95464",
+      "size": 23
+    },
+    {
+      "file": "legal/CLA_CONTRIBUTOR_LICENSE.pdf",
+      "sha256": "5b02f7e32ac6a5113df8ac8edd52b29d5a6fe038bd4a3ebbc8bc8f8aee7c4df0",
+      "size": 20
+    },
+    {
+      "file": "legal/DCO_DEVELOPER_CERTIFICATE.txt",
+      "sha256": "036a347a860185d4c466664acc8aced06cc631df41c6807bd648aa480d00ad5c",
+      "size": 31
+    },
+    {
+      "file": "legal/EULA_ENFORCEABLE_US_EU_MX.md",
+      "sha256": "2c7370e9547b26a80ce7d3cfebec707efc08778564f35473755ea36fe2aa9402",
+      "size": 17
+    },
+    {
+      "file": "legal/LICENSE_ENTERPRISE.txt",
+      "sha256": "0f3faa81409615fe006ec8128ed1dc6ea91e1b91d4251082e884a6a93993d1d0",
+      "size": 19
+    },
+    {
+      "file": "legal/LICENSE_FAMILIAR.txt",
+      "sha256": "75714fb5925a6aff3256f332281116df12feb8be5dcf8933e5625cdd4b942ab8",
+      "size": 943
+    },
+    {
+      "file": "legal/LICENSE_GLOBAL_PROPIETARIA.txt",
+      "sha256": "9f8d379149669871a5deebaf76753aae4e0b1be1d656ee5edeef3d195db6fe25",
+      "size": 27
+    },
+    {
+      "file": "legal/LICENSE_PQC.txt",
+      "sha256": "6c7c254e24e8ed2f2b40767627d6cc8a5a6a8b8830f54aaacdad7670e6d671fc",
+      "size": 21
+    },
+    {
+      "file": "legal/LICENSE_SOURCE_AVAILABLE.txt",
+      "sha256": "b9492701d716aa0da42b22ee404395e22659d7c5865cb9e16f6b6bafa5e1d9c9",
+      "size": 24
+    },
+    {
+      "file": "legal/NOTARIZATION_PROOF.md",
+      "sha256": "79f24c867bf39cc4cf20d5c7cdb1def620efd0b876effa31fc0bc17aa5a86217",
+      "size": 20
+    },
+    {
+      "file": "legal/PATENT_PENDING.txt",
+      "sha256": "8fdd8e5cb33cf7eedee3672bd472de3aabdec422e102f1efa948cac6880cb923",
+      "size": 21
+    },
+    {
+      "file": "legal/THIRD_PARTY_NOTICES.md",
+      "sha256": "f926a0842d86c4cc5aeb248378933240f295efb3e892eaba17c7813150c92bd1",
+      "size": 21
+    },
+    {
+      "file": "legal/TIMESTAMP_RFC3161.tsr",
+      "sha256": "805fd9f5cdcf8bf8fee462cf27542061865c7cab324dd941ead97311e2957326",
+      "size": 15
+    },
+    {
+      "file": "legal/TRADE_SECRET_POLICY.md",
+      "sha256": "6b49056ec10fb2206ef6e8f5c4af904d403c798cbf4792b53b98cff903e9465f",
+      "size": 21
+    },
+    {
+      "file": "legal/VOICE_CONSENT_ORIGINAL_ONLY.md",
+      "sha256": "e058951dadfbc900e947648fed3ef681d8c430ae7f52e556fc0ede79339f8fce",
+      "size": 1305
+    },
+    {
+      "file": "legal/international/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "legal/international/EXPORT_CONTROL_ECCN.txt",
+      "sha256": "aa54dfbdd2c2986960ecf96b23d0b55027f21d8e0e19487bcb4cefcad588a754",
+      "size": 19
+    },
+    {
+      "file": "legal/international/INDAUTOR_MX_REGISTRO.pdf",
+      "sha256": "5130735905618094dda4410a2860376adb75f730ce1e9cab3a3185e1ec783267",
+      "size": 25
+    },
+    {
+      "file": "legal/international/PATENT_PCT_WIPO_PCT-MX2024-XXXX.pdf",
+      "sha256": "19eb656c8fc9d9ef09e44bde3d41bc256621e35db3be086abae5fe5307079df7",
+      "size": 20
+    },
+    {
+      "file": "legal/international/TRADEMARK_EUIPO.pdf",
+      "sha256": "a9ba3023c99acc56c6fee296e45d03feb2e0636400f845fad12367300a347f90",
+      "size": 22
+    },
+    {
+      "file": "legal/international/TRADEMARK_IMPI_MX.pdf",
+      "sha256": "eb35a3462da4353959f9ce67d315672b2f8f937cdc975591657a6b541fde880a",
+      "size": 21
+    },
+    {
+      "file": "legal/international/TRADEMARK_USPTO.pdf",
+      "sha256": "3aa01c0a202f5ba4cfd87868f749d66340046dc2f79c4127b4fe3f886f26c7d5",
+      "size": 22
+    },
+    {
+      "file": "legal/international/USCO_TXu_REGISTRATION.pdf",
+      "sha256": "feacb45cc5f2a7ceb5387398600bc0a769df5c2f088301b1815587fcb7012a5f",
+      "size": 21
+    },
+    {
+      "file": "legal/international/WIPO_COPYRIGHT_REGISTRATION.pdf",
+      "sha256": "b136abc5b638e52369c73939df17a904acaf591939c4e465b84f69cf086b8131",
+      "size": 21
+    },
+    {
+      "file": "legal/licensing/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "legal/licensing/dual_licensing_matrix.md",
+      "sha256": "554b4b945c63d876db7243af9028bb7753567fbc4cfa83a1335f6ad3d2c1bd50",
+      "size": 23
+    },
+    {
+      "file": "legal/notarial/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "legal/notarial/CHAIN_OF_CUSTODY.json",
+      "sha256": "480c5eb0930c4869868ae4d8b0de274a77b1aaef6785bbbe05d8e1f6286dfcb5",
+      "size": 25
+    },
+    {
+      "file": "legal/notarial/notario_toluca_acta.pdf",
+      "sha256": "1b49ffcfbba95b99e6ad365264e7fc504b544795e449e4369859aa8740d33bd8",
+      "size": 30
+    },
+    {
+      "file": "scripts/sbom.cjs",
+      "sha256": "9dd7184d0c6d1be659c720fe4f703a912fc85d68a181955fc021b3e9ea62488d",
+      "size": 1899
+    },
+    {
+      "file": "scripts/sbom.js",
+      "sha256": "050933ed6888574898e766e779ef0c29e463e232ef7c8cf2e4c9b812dded9ac4",
+      "size": 516
+    },
+    {
+      "file": "security/sbom.cyclonedx.json",
+      "sha256": "c0be7369ad7f3ed82f6aafec57e473eeee40258e8a946111a79b7148662ef99a",
+      "size": 20012
+    },
+    {
+      "file": "src/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "src/core/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "src/core/guardian.js",
+      "sha256": "6a7270b80dd48a24ed83dc21110df17924787fbbcff94bca34d77070af08019f",
+      "size": 726
+    },
+    {
+      "file": "src/core/identity.js",
+      "sha256": "a767e9a9d525ed95a3055a980062562b1309d4614c684fb286aa5650a13f4cac",
+      "size": 30
+    },
+    {
+      "file": "src/core/kernel.js",
+      "sha256": "a4996918cbf60eb514515c2d9917ffeb3b7f1f1faf210a382def4397dcc1816c",
+      "size": 30
+    },
+    {
+      "file": "src/core/memory_wipe.js",
+      "sha256": "9cfc5999aa645997a9182c9781a7c2c9919b6679a6beb40daafd6d4912e4def0",
+      "size": 25
+    },
+    {
+      "file": "src/core/secure_enclave.js",
+      "sha256": "abd1b8f6bbc7c25eb747340052e30228a01fdcc14d43b064eead1c5d8fe99f0a",
+      "size": 29
+    },
+    {
+      "file": "src/core/vault.js",
+      "sha256": "5943c57b875eed08efa4218bdbded2e7a7e3ec3cdee469cefb50270d832f3add",
+      "size": 31
+    },
+    {
+      "file": "src/crypto/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "src/crypto/NIST_VECTORS/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "src/crypto/NIST_VECTORS/dilithium_test_vectors.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "size": 2
+    },
+    {
+      "file": "src/crypto/NIST_VECTORS/kyber_test_vectors.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "size": 2
+    },
+    {
+      "file": "src/crypto/aes_gcm_siv.js",
+      "sha256": "2be0a8b1908246fe0a4e729c1a9be68a02ef4c9f92c6e0d2fc1e6c5c0737cda1",
+      "size": 10
+    },
+    {
+      "file": "src/crypto/argon2id_kdf.js",
+      "sha256": "2d576173a2dd41bbdf2efc44ca12aed431cf67439a496fbb43e21c7eb1156903",
+      "size": 11
+    },
+    {
+      "file": "src/crypto/ml_dsa_65.js",
+      "sha256": "4a368be97309c1f10c8b4ea6d412fcdb36451cc55c14155c21f7be8a4a234a96",
+      "size": 12
+    },
+    {
+      "file": "src/crypto/ml_kem_768.js",
+      "sha256": "72e9cc085c5a1ea13105b67f7dcd0a221dcf830e2c023c021ab09677202f8a67",
+      "size": 13
+    },
+    {
+      "file": "src/crypto/pqc_dilithium.js",
+      "sha256": "c8f9fc8f743a74376994aca11a9ebdba766fc151438040fb6f5cbf49b82fc2c3",
+      "size": 659
+    },
+    {
+      "file": "src/crypto/pqc_kyber.js",
+      "sha256": "92d2da41a7704b558ddf0b0257285fc93ed466686f86c1a80fc9000b48eb88b8",
+      "size": 742
+    },
+    {
+      "file": "src/crypto/pqc_sphincs.js",
+      "sha256": "5313ccd3b3bb951410005baf0cb55d5f048e2781eb911583389b769a00e6bfe8",
+      "size": 702
+    },
+    {
+      "file": "src/crypto/qkd_sim.js",
+      "sha256": "b6bf66ce122a1a16f3b17b0e38161792b7a99cb9d1d49e63021f97fea424462c",
+      "size": 10
+    },
+    {
+      "file": "src/crypto/slh_dsa.js",
+      "sha256": "a6eb28254254b92b39e4be3986f75b701b738fbbc91a24a33c8836a3671bfbcb",
+      "size": 10
+    },
+    {
+      "file": "src/defense/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "src/defense/audit_logger.js",
+      "sha256": "16682228aa148a87b13d0ceb392fc2f1339e5d0e11f2e8ecad63c8602e56b0a8",
+      "size": 15
+    },
+    {
+      "file": "src/defense/constant_time_compare.js",
+      "sha256": "5bb6a0e65cb294d3b5a88a510a52416444a3ebc5a4ce8fa9d92504ad4f0cc206",
+      "size": 725
+    },
+    {
+      "file": "src/defense/csp_generator.js",
+      "sha256": "4a445ee4f9d32a67633273fb77517fdf6303287bf8b0ff03e68622527c66861c",
+      "size": 6
+    },
+    {
+      "file": "src/defense/prompt_injection_shield.js",
+      "sha256": "c3834ea24c1891deac21e9045d1a0b12297553acb01a6592334ad0715c4fcce9",
+      "size": 1144
+    },
+    {
+      "file": "src/defense/quantum_entropy.js",
+      "sha256": "da96a3e665e97c0b18b366044e0059694c3eefa71b088eb01b7fd65bbfd78c03",
+      "size": 10
+    },
+    {
+      "file": "src/defense/rate_limit.js",
+      "sha256": "3f085707740efc31f1f19e4a69dff75fd046f0b1b46d9c6ea6d20dda904844d0",
+      "size": 13
+    },
+    {
+      "file": "src/defense/secret_scanner.js",
+      "sha256": "624c8c237c873c16d7d4548c08c3d210b0615cbbc40fcf42957833d311985e99",
+      "size": 10
+    },
+    {
+      "file": "src/defense/self_destruct_triggers.js",
+      "sha256": "71df636bcde028003d3f7516209cb077374b103577026346e4f35722a5a77488",
+      "size": 11
+    },
+    {
+      "file": "src/defense/waf_rules.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "size": 2
+    },
+    {
+      "file": "src/pages/index.html",
+      "sha256": "04081b01a1c63448d77c55aa0b10be330cd30407bfc3455d6a7731067a810478",
+      "size": 1809
+    },
+    {
+      "file": "src/pages/multivault.js",
+      "sha256": "335a5c71abb1143604835797298a901e4a27c7291dbb428e34a8859629f0aeec",
+      "size": 1537
+    },
+    {
+      "file": "src/pages/portal.js",
+      "sha256": "eddfc3e629245696e03ff8ccac2e6a0c0f2eea3924214c903e44e4ffc220f6f2",
+      "size": 2576
+    },
+    {
+      "file": "src/pages/qr.js",
+      "sha256": "81a51d94d223b0a2c81a45581292358722283a3dac54e088af26238ee2297eb1",
+      "size": 371
+    },
+    {
+      "file": "src/schemas/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "src/schemas/identity.schema.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "size": 2
+    },
+    {
+      "file": "src/schemas/vault.schema.json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "size": 2
+    },
+    {
+      "file": "src/shared/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "src/shared/constants.js",
+      "sha256": "68b7049bf9aef9919fe3eebacc77fe473350e731cd449797dcb58a5f341a3195",
+      "size": 454
+    },
+    {
+      "file": "src/shared/errors.js",
+      "sha256": "9e9fd4d4b549f3c6385607d58608243d7cc468fe35f674605e9712acb35e46c5",
+      "size": 21
+    },
+    {
+      "file": "src/shared/validators.js",
+      "sha256": "b28eee445f7fa00106a9b56db0e39809e048a7df6fa68bd751e5ae834c231679",
+      "size": 48
+    },
+    {
+      "file": "src/unknown/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "file": "src/unknown/ai_alignment_manifest.json",
+      "sha256": "edc4eff1defec310a84ab1d86c53fdef62f32c7bd58b35615faf9a4e70f36614",
+      "size": 521
+    },
+    {
+      "file": "src/unknown/anti_agi_mimicry.md",
+      "sha256": "b109a3ec820841a2d9f46845f960da83a5771e6111886fb726302f3d4b9945d2",
+      "size": 10
+    },
+    {
+      "file": "src/unknown/post_quantum_consciousness.md",
+      "sha256": "cdd5fe27dffc58e6998be5be8d4ca8bc4054810f98403a0faca458c546bccf28",
+      "size": 5
+    },
+    {
+      "file": "src/unknown/quantum_observer_protection.md",
+      "sha256": "2d09cfcc191cf271e9e1d49795808d52e679e6239a3e3e0df9e0955da509a4ce",
+      "size": 9
+    },
+    {
+      "file": "src/unknown/self_destructing_memory.md",
+      "sha256": "74052e9ac3c219f02479a4a0e9324b9abf643c7e510e10e8830e4031885eff24",
+      "size": 8
+    },
+    {
+      "file": "src/unknown/soulbound_identity.md",
+      "sha256": "3e318d4b61e51e154bba11f885bf740d410446ae705176d801265f632accb349",
+      "size": 11
+    },
+    {
+      "file": "src/unknown/temporal_anchor.md",
+      "sha256": "da0480392099b88726397bc85f429f0ed62567bad12e4c0651e49fccb529c370",
+      "size": 8
+    },
+    {
+      "file": "src/unknown/zero_knowledge_biometrics.md",
+      "sha256": "4d797367564908c015986ee6d9d676d113805f26fc2a9068c44c62e333a36978",
+      "size": 8
     }
-  },
-  "components": []
+  ],
+  "components": 122,
+  "legal": [
+    "VOICE_CONSENT_ORIGINAL_ONLY.md",
+    "LICENSE_FAMILIAR.txt",
+    "VOZ_ORIGINAL_ARQUITECTURA.md"
+  ]
 }
