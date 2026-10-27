@@ -1,109 +1,54 @@
-import { formatEther, formatUnits, JsonRpcProvider } from 'ethers';
+import { formatEther, JsonRpcProvider } from 'ethers';
 
 export const CHAINS = {
-  polygon:  { host: 'polygon-mainnet', symbol: 'POL', chainId: 137   },
-  ethereum: { host: 'eth-mainnet',     symbol: 'ETH', chainId: 1     },
-  arbitrum: { host: 'arb-mainnet',     symbol: 'ETH', chainId: 42161 },
-  base:     { host: 'base-mainnet',    symbol: 'ETH', chainId: 8453  },
-  optimism: { host: 'opt-mainnet',     symbol: 'ETH', chainId: 10    },
+  polygon:  { rpc: 'https://polygon-bor-rpc.publicnode.com',  symbol: 'POL', chainId: 137,   explorer: 'https://polygonscan.com' },
+  ethereum: { rpc: 'https://ethereum-rpc.publicnode.com',     symbol: 'ETH', chainId: 1,     explorer: 'https://etherscan.io' },
+  arbitrum: { rpc: 'https://arbitrum-one-rpc.publicnode.com', symbol: 'ETH', chainId: 42161, explorer: 'https://arbiscan.io' },
+  base:     { rpc: 'https://base-rpc.publicnode.com',         symbol: 'ETH', chainId: 8453,  explorer: 'https://basescan.org' },
+  optimism: { rpc: 'https://optimism-rpc.publicnode.com',     symbol: 'ETH', chainId: 10,    explorer: 'https://optimistic.etherscan.io' },
 };
 
-const SPAM_WORDS = ['claim','reward','visit','www.','http','airdrop','redeem','.app','.lol','.eu','.com'];
-
-function hasNonAscii(s) {
-  for (const c of s) if (c.charCodeAt(0) > 127) return true;
-  return false;
+const providers = {};
+function getProvider(rpc) {
+  if (!providers[rpc]) providers[rpc] = new JsonRpcProvider(rpc, undefined, { staticNetwork: true });
+  return providers[rpc];
 }
 
-function isSpamToken(meta) {
-  const name = meta.name || '';
-  const symbol = meta.symbol || '';
-  if (!name || !symbol) return true;
-  if (!meta.logo) return true;
-  if (hasNonAscii(name) || hasNonAscii(symbol)) return true;
-  const digits = (symbol.match(/[0-9]/g) || []).length;
-  if (digits > 2) return true;
-  const combo = (name + ' ' + symbol).toLowerCase();
-  for (const w of SPAM_WORDS) if (combo.includes(w)) return true;
-  if ((name + symbol).length > 30) return true;
-  return false;
-}
-
-async function rpc(host, method, params, key) {
-  const url = `https://${host}.g.alchemy.com/v2/${key}`;
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ jsonrpc: '2.0', id: 1, method, params }),
-  });
-  const data = await res.json();
-  if (data.error) throw new Error(JSON.stringify(data.error));
-  return data.result;
-}
-
-export async function resolveAddress(input, key) {
-  if (!input.endsWith('.eth')) return input;
-  const provider = new JsonRpcProvider(`https://eth-mainnet.g.alchemy.com/v2/${key}`);
-  const resolved = await provider.resolveName(input);
-  if (!resolved) throw new Error(`No se pudo resolver ${input}`);
-  return resolved;
-}
-
-async function getChainData(address, key, name, cfg) {
+async function getChain(name, cfg, address) {
   try {
-    const balWei = await rpc(cfg.host, 'eth_getBalance', [address, 'latest'], key);
-    const tk = await rpc(cfg.host, 'alchemy_getTokenBalances', [address, 'erc20'], key);
-    const nonZero = tk.tokenBalances.filter(t => t.tokenBalance !== '0x' + '0'.repeat(64));
-
-    const tokens = [];
-    let spam = 0;
-    for (const t of nonZero) {
-      const meta = await rpc(cfg.host, 'alchemy_getTokenMetadata', [t.contractAddress], key);
-      if (isSpamToken(meta)) { spam++; continue; }
-      tokens.push({
-        symbol: meta.symbol,
-        name: meta.name,
-        balance: formatUnits(BigInt(t.tokenBalance), meta.decimals || 18),
-        addr: t.contractAddress,
-      });
-    }
-
-    const txRes = await rpc(cfg.host, 'alchemy_getAssetTransfers', [{
-      fromBlock: '0x0', toBlock: 'latest', fromAddress: address,
-      category: ['external', 'erc20'], maxCount: '0x5', order: 'desc',
-    }], key);
-
-    const txs = (txRes.transfers || [])
-      .filter(tx => !hasNonAscii(tx.asset || ''))
-      .map(tx => ({
-        date: new Date(tx.metadata.blockTimestamp).toISOString().slice(0, 10),
-        amount: tx.value !== null ? tx.value.toFixed(4) : '0',
-        asset: tx.asset || cfg.symbol,
-        to: tx.to,
-      }));
-
+    const provider = getProvider(cfg.rpc);
+    const wei = await provider.getBalance(address);
     return {
       chain: name,
       chainId: cfg.chainId,
       symbol: cfg.symbol,
-      balance: formatEther(BigInt(balWei)),
-      tokens,
-      spamFiltered: spam,
-      transactions: txs,
+      balance: formatEther(wei),
+      tokens: [],
+      spamFiltered: 0,
+      transactions: [],
+      explorer: cfg.explorer + '/address/' + address,
     };
   } catch (e) {
-    return { chain: name, chainId: cfg.chainId, error: e.message };
+    return { chain: name, chainId: cfg.chainId, error: e.message.slice(0, 120) };
   }
 }
 
-export async function getWalletData(input, key) {
-  const address = await resolveAddress(input, key);
-  const results = await Promise.all(
-    Object.entries(CHAINS).map(([name, cfg]) => getChainData(address, key, name, cfg))
+export async function resolveAddress(input) {
+  if (!input.endsWith('.eth')) return input;
+  const provider = new JsonRpcProvider('https://ethereum-rpc.publicnode.com', undefined, { staticNetwork: true });
+  const resolved = await provider.resolveName(input);
+  if (!resolved) throw new Error('No se pudo resolver ' + input);
+  return resolved;
+}
+
+export async function getWalletData(input) {
+  let address = input;
+  if (input.endsWith('.eth')) address = await resolveAddress(input);
+  if (!/^0x[a-fA-F0-9]{40}$/.test(address)) throw new Error('Direccion invalida');
+
+  const chains = await Promise.all(
+    Object.entries(CHAINS).map(([name, cfg]) => getChain(name, cfg, address))
   );
-  return {
-    address,
-    resolvedFrom: input !== address ? input : null,
-    chains: results,
-  };
+
+  return { address, resolvedFrom: input !== address ? input : null, chains };
 }
