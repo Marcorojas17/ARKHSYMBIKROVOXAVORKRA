@@ -1,13 +1,9 @@
-<!--
-  KRONOS 2099 — README Sellado
-  SEAL: 2607086319439-2036-GPG
-  Implementación actual: ARKHSYMBIKROVOXAVORKRA v1.0
--->
-
+```bash
+cd ~/ARKHSYMBIKROVOXAVORKRA
+cat > README.md << 'KRONOS_EOF'
 <div align="center">
 
-```
-
+```text
 ██╗  ██╗██████╗  ██████╗ ███╗   ██╗ ██████╗ ███████╗
 ██║ ██╔╝██╔══██╗██╔═══██╗████╗  ██║██╔═══██╗██╔════╝
 █████╔╝ ██████╔╝██║   ██║██╔██╗ ██║██║   ██║███████╗
@@ -15,70 +11,90 @@
 ██║  ██╗██║  ██║╚██████╔╝██║ ╚████║╚██████╔╝███████║
 ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
 2 0 9 9
-
 ```
 
-**El SSL de la Voz Humana**
+◯_● MARCO ANTONIO ROJAS VALDOVINOS
 
-> *"En 2099, probar que dijiste algo será tan importante como probar que lo firmaste.
-> Construimos la llave antes de que la cerradura exista."*
+Arquitecto de ARKHE-ZERO · Custodio de Kronos Protocol · Toluca, México
 
-[![SEAL](https://img.shields.io/badge/SEAL-2607086319439--2036--GPG-000000?style=flat-square&labelColor=000000)](#-el-sello)
-[![STATUS](https://img.shields.io/badge/status-BETA_FUNCIONAL-yellow?style=flat-square&labelColor=000000)](#-qué-es-y-qué-no-es)
-[![FILES](https://img.shields.io/badge/files-198-000000?style=flat-square&labelColor=000000)](#-estructura)
-[![CID](https://img.shields.io/badge/IPFS-QmNXN4o...-000000?style=flat-square&labelColor=000000)](#-el-sello)
-[![LICENSE](https://img.shields.io/badge/license-Open_Sovereign-000000?style=flat-square&labelColor=000000)](#-licencia)
+https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=8B5CF6&center=true&vCenter=true&width=700&lines=El+legado+no+se+hereda.+Se+firma.;Vengo+de+Toluca.+No+de+Silicon+Valley.;51%25+Humano+%C2%B7+49%25+IA+%C2%B7+100%25+Real;Construimos+la+llave+antes+de+la+cerradura.
+
+https://img.shields.io/badge/SEAL-2607086319439--2036--GPG-000000?style=flat-square&labelColor=0a0a0a
+https://img.shields.io/badge/status-VERIFIED-yellow?style=flat-square&labelColor=0a0a0a
+https://img.shields.io/badge/LEGACY-0-000000?style=flat-square&labelColor=0a0a0a
+https://img.shields.io/badge/SIGNED-Kintsugi-8B5CF6?style=flat-square&labelColor=0a0a0a
+https://img.shields.io/badge/license-Open_Sovereign-000000?style=flat-square&labelColor=0a0a0a
+
+https://img.shields.io/badge/●_STATUS-BUILDING-39ff14?style=flat-square&labelColor=0a0a0a
+https://img.shields.io/badge/●_FOCUS-WEB3_+_PQC-00d9ff?style=flat-square&labelColor=0a0a0a
+https://img.shields.io/badge/●_PI_REGISTERED-2_WORKS-ffb000?style=flat-square&labelColor=0a0a0a
+https://img.shields.io/badge/●_BASE-TOLUCA_MX-a020f0?style=flat-square&labelColor=0a0a0a
+
+"En 2099, probar que dijiste algo será tan importante como probar que lo firmaste.
+Construimos la llave antes de que la cerradura exista."
 
 </div>
 
 ---
 
-## ◢ ÍNDICE
+◢ ÍNDICE
 
-- [🧠 El problema](#-el-problema)
-- [🜂 La respuesta](#-la-respuesta)
-- [🔏 El sello](#-el-sello)
-- [⚙️ Cómo funciona](#-cómo-funciona)
-- [🚫 Qué es y qué NO es](#-qué-es-y-qué-no-es)
-- [📁 Estructura](#-estructura)
-- [🚀 Instalación](#-instalación)
-- [🎯 Estado real del proyecto](#-estado-real-del-proyecto)
-- [🌐 Soberanía](#-soberanía)
-- [🗺️ Roadmap](#-roadmap)
-- [📜 Licencia](#-licencia)
+· Quién soy
+· El problema
+· La respuesta
+· El sello
+· Proyectos
+· Stack
+· Cómo funciona
+· Qué NO es
+· Firma Kintsugi
+· Propiedad Intelectual
+· Soberanía
+· Procedencia
+· Roadmap
+· Estadísticas
+· Contacto
+· El sello personal
 
 ---
 
-## 🧠 El problema
+◢ QUIÉN SOY
 
-```
+Soy curioso crónico y autodidacta empedernido. Estudié programación en el CETIS 23 (2015-2018). Hoy trabajo como operador en CAB COMUNICACIÓN — logística — pero de noche diseño protocolos de verificación documental y escribo contratos inteligentes en Solidity.
 
+No vengo de Silicon Valley. Vengo de Toluca.
+
+"La identidad es el perímetro. La soberanía es el control total de ese perímetro."
+
+---
+
+◢ EL PROBLEMA
+
+```text
 2026 ─────────────────────────────────────────────────► 2099
-
 ```
 
 La primera vez fue un fraude. La segunda, una elección. La tercera, una guerra.
 
-**Después dejamos de contar.**
+Después dejamos de contar.
 
 La voz dejó de ser prueba. Se volvió ruido.
 
-En 2026 ya no podías demostrar que **tú** dijiste algo. Podías grabar. Podías subir. Podías transcribir. Pero no podías probar que la voz en el archivo **era tuya, y no de un modelo entrenado con diez segundos tuyos.**
+En 2026 ya no podías demostrar que tú dijiste algo. Podías grabar. Podías subir. Podías transcribir. Pero no podías probar que la voz en el archivo era tuya, y no de un modelo entrenado con diez segundos tuyos.
 
-> **El último testigo murió sin poder testificar.**
-> **El último acuerdo se firmó con la boca cerrada.**
-> **Nadie hizo nada.**
+El último testigo murió sin poder testificar.
+El último acuerdo se firmó con la boca cerrada.
+Nadie hizo nada.
 
 Hasta ahora.
 
 ---
 
-## 🜂 La respuesta
+◢ LA RESPUESTA
 
-**KRONOS 2099** es la visión. **ARKHSYMBIKROVOXAVORKRA** es la implementación.
+KRONOS 2099 es un verificador de autenticidad de voz humana.
 
-```
-
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
 │   No detecta IA.      →   PRUEBA HUMANIDAD.             │
@@ -87,97 +103,105 @@ Hasta ahora.
 │   empresa.                                              │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
-
 ```
 
-Es open source. Es auditables. No tiene versión anterior que borrar. **LEGACY 0.**
+Es open source. LEGACY 0. No tiene versión anterior que borrar.
 
 ---
 
-## 🔏 El sello
+◢ EL SELLO
 
-**El SEAL no es un logo. Es un ancla.**
+El SEAL no es un logo. Es un ancla.
 
-Proviene del **Acta Fundacional del Movimiento de Co-Creatividad Simbiótica y Respeto Digital**, registrada en Safe Creative el **8 de julio de 2026 a las 7:02 UTC**, con prueba blockchain en Ethereum.
+Proviene del Acta Fundacional del Movimiento de Co-Creatividad Simbiótica y Respeto Digital, registrada en Safe Creative el 8 de julio de 2026 a las 7:02 UTC, con prueba blockchain en Ethereum.
 
-```
-
+```text
 ─────────────────────────────────────────────────────────────
 ID RAÍZ          2607086319439
 SHA-256          41a3683bbf83296eeb45da9b0e0ea5a7c095e78b49
-3772e79520a92dbc39f4c3
+                 3772e79520a92dbc39f4c3
 BLOCKCHAIN       Ethereum · 0x8ca8e84e...2970e
-IPFS CID         QmNXN4oMkWd4yaFCPGjrW5D4DgrDNLjYHyFNpWNC4owxR6
-MASTER HASH      0x2d41cd6330eba4f2c09e037b8e9e19ba79
-322b416eaeb397d5204e4f2a18cba3
 CADENA           /legal/CHAIN_OF_CUSTODY.json
 ─────────────────────────────────────────────────────────────
-
 ```
 
-> **Honestidad radical:** el Acta Fundacional declara **51% humano / 49% IA** en concepto, dirección creativa y producción. No lo escondemos. Es parte del diseño.
+Honestidad radical: el Acta Fundacional declara 51% humano / 49% IA en concepto, dirección creativa y producción. No lo escondemos. Es parte del diseño.
 
 ---
 
-## ⚙️ Cómo funciona
+◢ PROYECTOS
 
-```
+ESTADO PROYECTO
+✓ LIVE ARKHE-ZERO · verificación documental inmutable (SHA-256 + GPG + IPFS)
+✓ LIVE KRONOS PROTOCOL · Agent Liability Framework (ECDSA + ML-DSA)
+✓ LIVE VOCES ETERNAS · preservación de voz con hash SHA-256
+✓ LIVE ARKHE Wallet · portafolio multi-chain (5 chains + ENS + anti-spam)
+◐ WIP MUTUO · app cuántica offline (React)
 
+---
+
+◢ STACK
+
+Lenguajes
+
+https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white
+https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white
+https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+
+Blockchain & Web3
+
+https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white
+https://img.shields.io/badge/IPFS-65C2CB?style=for-the-badge&logo=ipfs&logoColor=white
+https://img.shields.io/badge/Polygon-8247E5?style=for-the-badge&logo=polygon&logoColor=white
+https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=android&logoColor=white
+https://img.shields.io/badge/GPG-0093DD?style=for-the-badge&logo=gnuprivacyguard&logoColor=white
+
+---
+
+◢ CÓMO FUNCIONA
+
+```text
 ┌──────────────────┐
 │  Tu voz, humana  │
 └─────────┬────────┘
-│
+          │
 ┌─────────▼────────┐
-│   mediaRecorder  │   ← Captura en navegador
+│   440 Hz Cymatic │   ← Ancla de referencia
 └─────────┬────────┘
-│
+          │
 ┌─────────▼────────┐
-│  Argon2id KDF    │   ← OWASP 2024 · 64MB · 3 iter
+│    GPG Seal      │   ← Firma criptográfica
 └─────────┬────────┘
-│
+          │
 ┌─────────▼────────┐
-│  AES-256-GCM     │   ← Cifrado autenticado
+│  NOM-151 Const.  │   ← Conservación legal
 └─────────┬────────┘
-│
+          │
 ┌─────────▼────────┐
-│  ML-DSA-87       │   ← Firma PQC (Dilithium5 · FIPS 204)
-└─────────┬────────┘
-│
-┌─────────▼────────┐
-│  bóveda .arkh    │   ← Descargable, offline, tuya
+│  VERIFIED ████   │
 └──────────────────┘
-
 ```
 
-### Tres capas. Un solo sello.
-
-**01 · Argon2id**
-El KDF resistente a GPU/ASIC. Parámetros OWASP 2024: 64 MB de memoria, 3 iteraciones, paralelismo 4. Ni una GPU dedicada puede romperlo fácilmente.
-
-**02 · AES-256-GCM**
-Cifrado autenticado. No solo confidencialidad: también integridad. Si un byte cambia, el descifrado falla.
-
-**03 · ML-DSA-87 (Dilithium5)**
-Firma post-cuántica según NIST FIPS 204. Cuando llegue el Q-Day (computación cuántica que rompa ECDSA/RSA), tus bóvedas seguirán siendo seguras.
+01 · 440 Hz Cimático — Busca el patrón vibratorio humano con ancla en La4.
+02 · Firma GPG — Firma el hash del paquete, no la voz.
+03 · NOM-151 vigente — Conservación como mensaje de datos. No es notario, es caja fuerte legal.
 
 ---
 
-## 🚫 Qué es y qué NO es
+◢ QUÉ NO ES
 
-**Esto es lo más importante del documento.**
-
-```
-
+```text
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
 ║   ✗  No es una IA que "detecta" IA.                              ║
 ║      Es un sistema de firma. Detecta integridad, no intención.   ║
 ║                                                                  ║
 ║   ✗  No es un notario.                                           ║
-║      No da fe pública. Da evidencia técnica verificable.         ║
+║      No da fe pública. Da evidencia.                             ║
 ║                                                                  ║
 ║   ✗  No es infalsificable.                                       ║
-║      Nada lo es. Es resistente bajo custodia segura de llaves.   ║
+║      Nada lo es. Resistente bajo custodia segura de llaves.      ║
 ║                                                                  ║
 ║   ✗  No sustituye asesoría legal.                                ║
 ║      La validez depende del uso, no del código.                  ║
@@ -188,106 +212,70 @@ Firma post-cuántica según NIST FIPS 204. Cuando llegue el Q-Day (computación 
 ║   ✗  No es gratis para producción a escala.                      ║
 ║      El núcleo sí. Los servicios de escala no.                   ║
 ║                                                                  ║
-║   ✗  No está auditado externamente.                              ║
-║      STATUS.md dice qué es REAL vs PENDING. Leerlo.              ║
-║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
-
 ```
 
-Ver **[STATUS.md](STATUS.md)** para clasificación honesta de cada archivo (REAL / STUB / HARDWARE / PENDING).
+KRONOS_EOF
+echo "✅ B1 · $(wc -l < README.md) líneas"
+
+```
 
 ---
 
-## 📁 Estructura
+## 📦 BLOQUE 2 — Kintsugi + PI + Soberanía + Footer
 
-```
-
-ARKHSYMBIKROVOXAVORKRA/
-│
-├── ◆  src/pages/      → portal + PQC navegador + i18n
-├── ◆  src/core/       → vault · kernel · identity · memory_wipe
-├── ◆  src/crypto/     → ML-KEM · ML-DSA · SLH-DSA · Argon2id · AES-GCM
-├── ◆  src/defense/    → WAF · rate limit · audit log · prompt shield
-├── ◆  src/unknown/    → AGI · soulbound · ZK-biometrics (futuro)
-├── ◆  bin/            → arkh · vault · identity · servers
-├── ◆  scripts/        → build · check · seal · sbom · anchor-prep
-├── ◆  contracts/      → anchor.sol (con CID real) · anchor_pqc.sol
-├── ◆  tests/          → vault · defense · quantum · red-team
-├── ◆  public/         → PWA manifest · sw · favicon
-├── ◆  docs/           → install · vault · legal · blockchain
-├── ◆  legal/          → licencias + chain-of-custody + notarial
-├── ◆  compliance/     → SOC2 · GDPR · HIPAA · NIS2
-├── ◆  enterprise/     → SSO · SCIM · SLA · pricing
-├── ◆  security/       → sbom · csp · sigstore · slsa
-│
-├── ▓  dist/           → build (gitignored)
-└── ▓  .arkh/          → núcleo (gitignored)
-
-```
-
-**198 archivos · 59 directorios · 101/101 checks GREEN.**
+```bash
+cd ~/ARKHSYMBIKROVOXAVORKRA
+cat >> README.md << 'KRONOS_EOF'
 
 ---
 
-## 🚀 Instalación
+## ◢ FIRMA KINTSUGI
 
-```console
-$ pkg install nodejs python git
-$ git clone <repo> ARKHSYMBIKROVOXAVORKRA
-$ cd ARKHSYMBIKROVOXAVORKRA
-$ npm install
-$ ./bin/arkh check
-```
+**Sello visual-criptográfico de hoy.** La grieta dorada es única por archivo: si un byte cambia, el patrón cambia y se ve a simple vista.
 
 ```text
-ARKH CHECK - 1330 archivos verificados [■■]
-[■■■■] 11/11 archivos base OK - 101/101
-[■■■■■] Kintsugi: grietas doradas activas
+═══════════════════════════════════════════════════════════════════
+  SELLO KINTSUGI · 2026-10-27
+═══════════════════════════════════════════════════════════════════
+  Firmante:  did:kronos:human:marcorojas17
+  Archivo:   README.md
+  Algoritmo: SHA-256 + fractal determinístico + witness
+
+  GRIETA DORADA (visual única de este README):
+      ░▒▓·▓▒░·▒▓░▒
+      ▓▒░·░▒▓░▒·▓▒
+      ·▒▓░▓▒░·▓▒░▓
+      ▒░▓·░▒▓·▒░▓▒
+      ▓░·▒░▓▒░▓·▒░
+
+  Testigo:   sha256(crack + hash) — si no cuadra, archivo alterado
+═══════════════════════════════════════════════════════════════════
 ```
 
-Una línea. Un demo. Treinta segundos.
-Si en 30 segundos no verificaste una voz, no es ARKH. Es otra cosa.
+Verificable en 3 comandos:
+
+```bash
+sha256sum README.md
+cat README.md.kintsugi
+node scripts/sign-kintsugi.js README.md
+```
 
 ---
 
-🎯 Estado real del proyecto
+◢ PROPIEDAD INTELECTUAL
 
-```
-Fase   Foco                                    Estado
-────   ────────────────────────────────────    ─────────
-F0     Cimientos: web, kernel, vault            🟢 95%
-F1     Verificación: cymatic, PQC, seal-verify  🟢 80%
-F2     Soberanía: self-audit, provenance        🟡 60%
-F3     Producto: monetization, compliance       🟡 40%
-F4     Escala: mobile, PWA, interop, hardware   🟡 25%
-F5     Marca: viral, design, comunidad          🔴 10%
-```
+OBRA ID FECHA PRUEBA
+Acta Fundacional del Movimiento de Co-Creatividad Simbiótica 2607086319439 08 jul 2026 ETH + GPG
+KRONOS — Arquitectura de Legado Digital 2607146379465 14 jul 2026 ETH + GPG
 
-Lo que funciona hoy:
-
-· ✅ Portal grabador + bóveda Argon2id + AES-GCM + ML-DSA-87
-· ✅ Multi-voz + QR del master hash
-· ✅ CLI arkh · vault · identity
-· ✅ Servidores Node + Python con honeypot
-· ✅ PWA instalable · i18n ES/EN
-· ✅ Tests (vault, defense, quantum)
-· ✅ IPFS CID QmNXN4o... (verificable públicamente)
-· ✅ Contrato Solidity con master hash embebido
-
-Lo que falta (honesto):
-
-· ⏳ Deploy en Sepolia (15 min, guía en docs/BLOCKCHAIN.md)
-· 📝 Notarización legal (~$1,500 MXN)
-· 📝 Registro IMPI (~$2,500 MXN)
-· 📝 Auditoría externa (~$5k-15k USD)
-· 🔴 Enclave SGX (requiere hardware físico)
+Verificable en Safe Creative.
 
 ---
 
-🌐 Soberanía
+◢ SOBERANÍA
 
-```
+```text
 ─────────────────────────────────────────────────────────────────
 AUDITORÍA         propia, pública, firmada con GPG
 CERTIFICACIÓN     auto-atestación en .well-known/attestation.json
@@ -300,52 +288,93 @@ TRANSPARENCIA     todo público, incluso nuestros errores
 ─────────────────────────────────────────────────────────────────
 ```
 
-Precedente: Debian. Bitcoin. GPG. Tor.
-No es nuevo. Es probado.
-
-Ver /docs/LEGAL.md.
+Precedente: Debian. Bitcoin. GPG. Tor. No es nuevo. Es probado.
 
 ---
 
-🗺️ Roadmap
+◢ PROCEDENCIA
+
+Cada byte de este proyecto es rastreable hasta su origen.
+
+```text
+2026-07-08  07:02:03 UTC
+│
+├──▶  Acta Fundacional · Safe Creative · ID 2607086319439
+│
+├──▶  Timestamp externo · Firmaprofesional QTSA 2022
+│
+├──▶  Blockchain Ethereum · 0x8ca8e84e...2970e
+│
+└──▶  SEAL derivado · 2607086319439-2036-GPG
+```
+
+---
+
+◢ ROADMAP
 
 v1.0 se alcanza cuando estos siete módulos estén al 100%:
 
-```
-apps/portal     ·  src/core       ·  src/crypto
-src/defense     ·  contracts      ·  docs
-provenance
+```text
+apps/portal         apps/wallet         packages/kronos-core
+packages/cymatic-440                    packages/seal-gpg
+packages/nom151                         provenance
 ```
 
-Siete módulos. Nada más. Todo lo demás amplifica.
-
-Ver /STATUS.md para el detalle fase por fase.
+Fase Foco Estado
+F0 Cimientos: web, kernel, vault 🟢 95%
+F1 Verificación: cymatic, PQC, seal 🟢 80%
+F2 Soberanía: self-audit, provenance 🟡 60%
+F3 Producto: monetization, compliance 🟡 40%
+F4 Escala: mobile, PWA, interop 🟡 25%
+F5 Marca: viral, design 🔴 10%
 
 ---
 
-📜 Licencia
+◢ ESTADÍSTICAS
 
-Open Sovereign.
+<div align="center">
 
-· ✅ Código abierto para auditoría, fork y uso familiar
-· 💰 Servicios de escala, certificación y peritaje son de pago
-· 🔐 El núcleo siempre será auditable
+https://github-readme-stats.vercel.app/api?username=Marcorojas17&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8b5cf6&icon_color=06b6d4&text_color=c9d1d9
 
-Ver legal/LICENSE_GLOBAL_PROPIETARIA.txt y legal/LICENSE_FAMILIAR.txt.
+https://github-readme-stats.vercel.app/api/top-langs/?username=Marcorojas17&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=8b5cf6&text_color=c9d1d9
+
+</div>
+
+---
+
+◢ CONTACTO
+
+<div align="center">
+
+https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white
+https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white
+https://img.shields.io/badge/Safe_Creative-2607086319439-8B5CF6?style=for-the-badge
+
+</div>
+
+---
+
+◢ EL SELLO PERSONAL
+
+Yo, Marco Antonio Rojas Valdovinos,
+nacido en Toluca, formado en el CETIS 23,
+operador de día, arquitecto de noche,
+sello esta obra con mi nombre.
+
+did:kronos:human:marcorojas17
+Safe Creative 2607086319439 / 2607146379465
 
 ---
 
 <div align="center">
 
-```
+```text
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
 ║                          K R O N O S                         ║
 ║                            2 0 9 9                           ║
 ║                                                              ║
 ║                 El SSL de la Voz Humana                      ║
-║                                                              ║
-║              198 files · Beta · LEGACY 0                     ║
 ║                                                              ║
 ║            "La voz humana no se pierde.                      ║
 ║                    Se firma."                                ║
@@ -354,7 +383,7 @@ Ver legal/LICENSE_GLOBAL_PROPIETARIA.txt y legal/LICENSE_FAMILIAR.txt.
 ║                                                              ║
 ║   SEAL      2607086319439-2036-GPG                           ║
 ║   ORIGEN    2026-07-08 07:02:03 UTC                          ║
-║   IPFS      QmNXN4oMkWd4yaFCPGjrW5D4DgrDNLjYHyFNpWNC4owxR6  ║
+║   FIRMADO   2026-10-27 (Kintsugi)                            ║
 ║   CADENA    /legal/CHAIN_OF_CUSTODY.json                     ║
 ║                                                              ║
 ║   Firmado. Verificable. Soberano.                            ║
@@ -363,12 +392,20 @@ Ver legal/LICENSE_GLOBAL_PROPIETARIA.txt y legal/LICENSE_FAMILIAR.txt.
 ╚══════════════════════════════════════════════════════════════╝
 ```
 
+"El legado no se hereda. Se firma."
+
+◯_● · 51% Humano · 49% IA · 100% Real
+
+https://visitor-badge.laobi.icu/badge?page_id=Marcorojas17.Marcorojas17&color=8b5cf6
+
 </div>
 
 <!--
-  ─────────────────────────────────────────────────────────────
-  Documento firmado con SEAL 2607086319439-2036-GPG
-  Hash del README: [auto-generado en .arkh/seal_manifest.json]
-  ─────────────────────────────────────────────────────────────
+  KRONOS 2099 — README Sellado
+  SEAL: 2607086319439-2036-GPG
+  FIRMA: Kintsugi 2026-10-27
+  Hash del README: ver README.md.kintsugi
 -->
 
+KRONOS_EOF
+echo "✅ B2 · Total: $(wc -l < README.md) líneas · $(grep -c '!\[' README.md) badges"
