@@ -1,3 +1,2 @@
-# data-room/CAP_TABLE.md
-
-_Pendiente de implementacion._
+# Cap Table
+100% Marco Antonio.

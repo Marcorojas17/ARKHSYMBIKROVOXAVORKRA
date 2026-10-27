@@ -1,3 +1,2 @@
-# docs/INSTALL.md
-
-_Pendiente de implementación._
+# Install Guide
+Run `npm install`.

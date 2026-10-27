@@ -1,3 +1,1 @@
-# src/shared/errors.js
-
-_Pendiente de implementacion._
+export class ARKHError extends Error {}

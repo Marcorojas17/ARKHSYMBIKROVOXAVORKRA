@@ -1,3 +1,4 @@
-# legal/licensing/dual_licensing_matrix.md
-
-_Pendiente de implementacion._
+# Dual Licensing Matrix
+| Use | License | Cost |
+|---|---|---|
+| Personal | Familiar | Free |

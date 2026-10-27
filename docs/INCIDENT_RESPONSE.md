@@ -1,3 +1,2 @@
-# docs/INCIDENT_RESPONSE.md
-
-_Pendiente de implementacion._
+# Incident Response
+Contact marco.a.rojas.v@hotmail.com.

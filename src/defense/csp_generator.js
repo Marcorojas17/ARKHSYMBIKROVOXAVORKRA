@@ -1,3 +1,1 @@
-# src/defense/csp_generator.js
-
-_Pendiente de implementacion._
+export const CSP = 'default-src self';

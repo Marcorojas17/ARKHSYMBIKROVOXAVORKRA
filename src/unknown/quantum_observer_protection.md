@@ -1,3 +1,2 @@
-# src/unknown/quantum_observer_protection.md
-
-_Pendiente de implementacion._
+# Quantum Observer
+Research pending.

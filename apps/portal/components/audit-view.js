@@ -1,3 +1,1 @@
-# apps/portal/components/audit-view.js
-
-_Pendiente de implementacion._
+// Audit UI Component

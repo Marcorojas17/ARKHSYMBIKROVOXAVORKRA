@@ -1,3 +1,2 @@
-# .github/workflows/release.yml
-
-_Pendiente de implementacion._
+name: Release
+on: release

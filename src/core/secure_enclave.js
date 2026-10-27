@@ -1,3 +1,1 @@
-# src/core/secure_enclave.js
-
-_Pendiente de implementacion._
+export const ENCLAVE_AVAILABLE = false;

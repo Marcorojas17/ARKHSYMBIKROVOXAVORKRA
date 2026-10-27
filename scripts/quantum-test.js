@@ -1,3 +1,1 @@
-# scripts/quantum-test.js
-
-_Pendiente de implementacion._
+console.log('Quantum test');

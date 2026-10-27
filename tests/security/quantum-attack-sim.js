@@ -1,3 +1,1 @@
-# tests/security/quantum-attack-sim.js
-
-_Pendiente de implementacion._
+// Quantum attack sim

@@ -1,3 +1,2 @@
-# enterprise/SCIM_PROVISIONING.md
-
-_Pendiente de implementacion._
+# SCIM Provisioning
+Status: PENDING

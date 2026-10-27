@@ -1,3 +1,1 @@
-# scripts/release.js
-
-_Pendiente de implementacion._
+console.log('Release script');

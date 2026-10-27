@@ -1,3 +1,2 @@
-# enterprise/BACKUP_RESTORE_SLA.md
-
-_Pendiente de implementacion._
+# Backup SLA
+RPO: 1 hour, RTO: 4 hours.

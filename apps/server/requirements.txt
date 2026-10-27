@@ -1,3 +1,2 @@
-# apps/server/requirements.txt
-
-_Pendiente de implementacion._
+fastapi
+uvicorn

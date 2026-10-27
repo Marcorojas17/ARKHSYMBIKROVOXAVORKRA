@@ -1,3 +1,4 @@
-# legal/THIRD_PARTY_NOTICES.md
-
-_Pendiente de implementacion._
+# Third-Party Notices
+- ethers.js (MIT)
+- express (MIT)
+- dotenv (MIT)

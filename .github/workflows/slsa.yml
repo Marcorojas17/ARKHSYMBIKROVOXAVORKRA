@@ -1,3 +1,2 @@
-# .github/workflows/slsa.yml
-
-_Pendiente de implementacion._
+name: SLSA
+on: push

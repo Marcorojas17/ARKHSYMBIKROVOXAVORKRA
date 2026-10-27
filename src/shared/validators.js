@@ -1,3 +1,1 @@
-# src/shared/validators.js
-
-_Pendiente de implementacion._
+export const isAddress = (a) => a.startsWith('0x');

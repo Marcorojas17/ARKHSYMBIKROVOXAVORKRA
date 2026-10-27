@@ -1,3 +1,2 @@
-# security/enclave/README.md
-
-_Pendiente de implementacion._
+# Enclave (SGX/SEV)
+Hardware required.

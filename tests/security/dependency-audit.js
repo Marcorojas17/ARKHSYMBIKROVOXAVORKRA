@@ -1,3 +1,1 @@
-# tests/security/dependency-audit.js
-
-_Pendiente de implementacion._
+// Dependency audit

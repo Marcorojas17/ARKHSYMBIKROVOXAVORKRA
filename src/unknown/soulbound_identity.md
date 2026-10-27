@@ -1,3 +1,2 @@
-# src/unknown/soulbound_identity.md
-
-_Pendiente de implementacion._
+# Soulbound Identity
+Research pending.

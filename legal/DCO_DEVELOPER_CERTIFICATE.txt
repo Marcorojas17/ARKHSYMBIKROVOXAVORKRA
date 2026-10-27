@@ -1,3 +1,2 @@
-# legal/DCO_DEVELOPER_CERTIFICATE.txt
-
-_Pendiente de implementacion._
+Developer Certificate of Origin (DCO)
+By making a contribution, I certify that I have the right to submit it.

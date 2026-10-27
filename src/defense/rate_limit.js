@@ -1,3 +1,1 @@
-# src/defense/rate_limit.js
-
-_Pendiente de implementacion._
+export const LIMIT = 100;

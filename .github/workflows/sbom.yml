@@ -1,3 +1,2 @@
-# .github/workflows/sbom.yml
-
-_Pendiente de implementacion._
+name: SBOM
+on: push

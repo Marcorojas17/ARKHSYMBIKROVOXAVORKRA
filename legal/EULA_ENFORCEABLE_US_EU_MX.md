@@ -1,3 +1,4 @@
-# legal/EULA_ENFORCEABLE_US_EU_MX.md
-
-_Pendiente de implementacion._
+# EULA (US/EU/MX)
+- Mexico: Ley Federal del Derecho de Autor
+- US: DMCA
+- EU: Copyright Directive

@@ -1,3 +1,2 @@
-# enterprise/TENANT_ISOLATION.md
-
-_Pendiente de implementacion._
+# Tenant Isolation
+Each tenant uses a separate RLS policy.

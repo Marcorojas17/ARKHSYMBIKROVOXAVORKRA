@@ -1,3 +1,3 @@
-# security/sbom.cyclonedx.json
-
-_Pendiente de implementacion._
+{
+  "bomFormat": "CycloneDX"
+}

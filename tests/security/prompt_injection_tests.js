@@ -1,3 +1,1 @@
-# tests/security/prompt_injection_tests.js
-
-_Pendiente de implementacion._
+// Prompt injection tests

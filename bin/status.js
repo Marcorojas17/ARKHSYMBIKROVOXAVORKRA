@@ -1,3 +1,2 @@
-# bin/status.js
-
-_Pendiente de implementacion._
+#!/usr/bin/env node
+console.log('Status CLI');

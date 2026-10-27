@@ -1,3 +1,2 @@
-# legal/TRADE_SECRET_POLICY.md
-
-_Pendiente de implementacion._
+# Trade Secret Policy
+Algorithms in `src/crypto` are proprietary.

@@ -1,3 +1,2 @@
-# src/unknown/anti_agi_mimicry.md
-
-_Pendiente de implementacion._
+# Anti-AGI Mimicry
+Research pending.

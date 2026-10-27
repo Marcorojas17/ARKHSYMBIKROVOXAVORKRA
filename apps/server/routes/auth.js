@@ -1,3 +1,1 @@
-# apps/server/routes/auth.js
-
-_Pendiente de implementacion._
+// Auth API Route

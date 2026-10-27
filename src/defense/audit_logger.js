@@ -1,3 +1,1 @@
-# src/defense/audit_logger.js
-
-_Pendiente de implementacion._
+export function log(e) { console.log(e); }

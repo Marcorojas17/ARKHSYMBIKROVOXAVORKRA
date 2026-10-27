@@ -1,3 +1,1 @@
-# src/core/identity.js
-
-_Pendiente de implementacion._
+export const IDENTITY_SCHEMA = 'did:kronos';

@@ -1,10 +1,1 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-console.log("=== STATUS ARKHÉ ZERO ===");
-console.log("Bus Toluca -> CDMX | 23:47 [OK]");
-console.log("Manifest: e8d9eac8");
-console.log("Branch: main | clean");
-const count = fs.readdirSync(path.join(__dirname, '..')).length;
-console.log(`Estructura root: ${count} entradas`);
+console.log('Status script');

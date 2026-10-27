@@ -1,3 +1,1 @@
-# scripts/sign.js
-
-_Pendiente de implementacion._
+console.log('Sign script');

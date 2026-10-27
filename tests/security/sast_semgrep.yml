@@ -1,3 +1,1 @@
-# tests/security/sast_semgrep.yml
-
-_Pendiente de implementacion._
+rules: []

@@ -1,3 +1,1 @@
-# examples/basic-vault/README.md
-
-_Pendiente de implementacion._
+# Basic Vault Example

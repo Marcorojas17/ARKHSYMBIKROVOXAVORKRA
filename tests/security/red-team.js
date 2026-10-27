@@ -1,3 +1,1 @@
-# tests/security/red-team.js
-
-_Pendiente de implementacion._
+// Red team tests

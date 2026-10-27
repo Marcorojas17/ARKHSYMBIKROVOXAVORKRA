@@ -1,13 +1,3 @@
 {
-  "version": "1.0.0",
-  "description": "Reglas WAF — configuración para Cloudflare Workers o Vercel Edge",
-  "rules": [
-    {"id": "rate_limit", "limit": "100 req/min per IP", "action": "throttle"},
-    {"id": "block_scanners", "match": "user-agent contains sqlmap|nikto|nmap", "action": "block"},
-    {"id": "block_xss", "match": "query contains <script|javascript:", "action": "block"},
-    {"id": "block_lfi", "match": "query contains ../ or /etc/passwd", "action": "block"},
-    {"id": "geo_block", "match": "country not in [MX, US, ES]", "action": "challenge"},
-    {"id": "bot_detect", "match": "no_cookie AND no_js_challenge", "action": "challenge"}
-  ],
-  "note": "Este archivo es solo configuración. Aplicar requiere backend real (Cloudflare/Vercel)."
+  "rules": []
 }

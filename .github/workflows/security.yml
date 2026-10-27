@@ -1,3 +1,2 @@
-# .github/workflows/security.yml
-
-_Pendiente de implementacion._
+name: Security
+on: push

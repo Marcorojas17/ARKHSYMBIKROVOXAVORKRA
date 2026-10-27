@@ -1,3 +1,2 @@
-# src/unknown/temporal_anchor.md
-
-_Pendiente de implementacion._
+# Temporal Anchor
+Research pending.

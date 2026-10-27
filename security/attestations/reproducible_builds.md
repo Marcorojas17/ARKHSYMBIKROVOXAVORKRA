@@ -1,3 +1,2 @@
-# security/attestations/reproducible_builds.md
-
-_Pendiente de implementacion._
+# Reproducible Builds
+Pending.

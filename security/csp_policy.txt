@@ -1,13 +1,1 @@
-Content-Security-Policy:
-  default-src 'self';
-  script-src 'self' https://cdn.tailwindcss.com;
-  style-src 'self' 'unsafe-inline';
-  img-src 'self' data: https://img.shields.io;
-  font-src 'self';
-  connect-src 'self';
-  media-src 'none';
-  object-src 'none';
-  frame-ancestors 'none';
-  base-uri 'self';
-  form-action 'none';
-  upgrade-insecure-requests;
+default-src 'self';

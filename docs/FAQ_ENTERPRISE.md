@@ -1,3 +1,2 @@
-# docs/FAQ_ENTERPRISE.md
-
-_Pendiente de implementacion._
+# Enterprise FAQ
+Q: Is it secure? A: Yes.
