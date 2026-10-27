@@ -13,3 +13,5 @@ data-room/
 .DS_Store
 node_modules/
 apps/wallet/node_modules/
+.env
+test.txt
