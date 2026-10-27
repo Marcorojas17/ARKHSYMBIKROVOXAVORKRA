@@ -1,0 +1,22 @@
+LICENCIA DE USO FAMILIAR LIMITADA
+ARKHSYMBIKROVOXAVORKRA · NEON ARCHIVE
+
+OTORGADA A: [NOMBRE]
+USO: Personal, privado, no comercial.
+
+PERMITIDO:
+- Escuchar grabaciones familiares.
+- Acceder a boveda cifrada.
+- Compartir dentro del circulo familiar.
+
+PROHIBIDO:
+- Entrenar IA/ML con las voces.
+- Clonar o suplantar identidad.
+- Distribuir, vender o publicar.
+- Transferir esta licencia.
+
+REVOCABLE en cualquier momento.
+Cifrado AES-256, almacenamiento local.
+
+Fecha: 26 Oct 2026
+Firma: Marco Antonio Rojas Valdovinos

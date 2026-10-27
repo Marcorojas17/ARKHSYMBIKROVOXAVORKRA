@@ -1,0 +1,23 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# BINARIO CLI - ARKHSYMBIKROVOXAVORKRA
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT" || exit 1
+
+echo "ARKHSYMBIKROVOXAVORKRA CLI - 51% Humano 49% IA"
+
+case "$1" in
+  build) node scripts/build.js ;;
+  check) node scripts/check.js ;;
+  serve) npx serve dist -p 3000 ;;
+  live)  npx localtunnel --port 3000 --subdomain arkhsymbikrovoxavorkra ;;
+  seal)
+    echo "Sellando..."
+    echo "Titular: Marco Antonio Rojas Valdovinos"
+    echo "Fecha:   $(date -Iseconds)"
+    echo "SHA256:  $(sha256sum src/pages/index.html | cut -d' ' -f1)"
+    ;;
+  *)
+    echo "Uso: arkh {build|check|serve|live|seal}"
+    exit 1
+    ;;
+esac

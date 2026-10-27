@@ -1,0 +1,17 @@
+{
+  "name": "arkhsymbikrovoxavorkra",
+  "version": "1.0.0-neon",
+  "description": "Protocolo sellado de voz simbiotica - propiedad exclusiva Marco Antonio Rojas Valdovinos",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "check": "node scripts/check.js",
+    "serve": "npx serve dist -p 3000",
+    "live": "npx localtunnel --port 3000"
+  },
+  "dependencies": {
+    "serve": "^14.2.0",
+    "localtunnel": "^2.0.2"
+  },
+  "author": "Marco Antonio Rojas Valdovinos",
+  "license": "SEE LICENSE IN legal/LICENSE_GLOBAL_PROPIETARIA.txt"
+}
