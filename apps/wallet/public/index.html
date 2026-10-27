@@ -30,7 +30,6 @@ button:disabled{opacity:0.5;cursor:not-allowed}
 .error{color:#ef4444;background:rgba(239,68,68,0.1);padding:10px;border-radius:8px;margin-top:10px;font-size:0.85rem}
 .hidden{display:none}
 .resolved{color:#06b6d4;font-size:0.7rem;font-family:monospace;margin-top:6px;word-break:break-all}
-.total{font-size:0.75rem;color:#888;margin-top:8px;font-family:monospace}
 </style>
 </head>
 <body>
@@ -51,29 +50,20 @@ button:disabled{opacity:0.5;cursor:not-allowed}
 <script>
 const $ = id => document.getElementById(id);
 
-function shortAddr(a) {
-  if (!a) return '';
-  return a.slice(0, 10) + '...' + a.slice(-6);
-}
-
 function renderChain(c) {
   if (c.error) {
     return '<div class="card"><div class="chain-header"><span class="chain-name">' + c.chain + '</span></div><div class="chain-error">⚠ ' + c.error.slice(0, 100) + '</div></div>';
   }
   const tokensHtml = c.tokens.length === 0
-    ? '<div style="color:#555;font-size:0.75rem;font-family:monospace">Sin tokens legítimos</div>'
+    ? '<div style="color:#555;font-size:0.75rem;font-family:monospace">Sin tokens</div>'
     : c.tokens.map(t => '<div class="token"><span>' + t.symbol + '</span><span>' + parseFloat(t.balance).toFixed(4) + '</span></div>').join('');
-
   const txsHtml = c.transactions.length === 0
     ? '<div style="color:#555;font-size:0.75rem;font-family:monospace">Sin transacciones</div>'
     : c.transactions.slice(0, 3).map(tx => '<div class="tx"><span>' + tx.date + '</span><span>' + tx.amount + ' ' + tx.asset + '</span></div>').join('');
-
   return '<div class="card">' +
     '<div class="chain-header"><span class="chain-name">' + c.chain + '</span><span class="chain-balance"><b>' + parseFloat(c.balance).toFixed(4) + '</b> ' + c.symbol + '</span></div>' +
-    '<div class="label">Tokens (' + c.tokens.length + ')</div>' +
-    tokensHtml +
-    '<div class="label">Últimas TX</div>' +
-    txsHtml +
+    '<div class="label">Tokens (' + c.tokens.length + ')</div>' + tokensHtml +
+    '<div class="label">Últimas TX</div>' + txsHtml +
     '<div class="spam-info">' + c.spamFiltered + ' spam filtrados · chainId ' + c.chainId + '</div>' +
   '</div>';
 }
@@ -85,17 +75,14 @@ $('btn').onclick = async () => {
   $('result').innerHTML = '';
   $('btn').disabled = true;
   $('btn').textContent = 'Consultando 5 redes...';
-
   try {
     const res = await fetch('/api/wallet/' + encodeURIComponent(addr));
     const data = await res.json();
     if (data.error) throw new Error(data.error);
-
     if (data.resolvedFrom) {
       $('resolved').textContent = '↳ ' + data.resolvedFrom + ' → ' + data.address;
       $('resolved').classList.remove('hidden');
     }
-
     $('result').innerHTML = data.chains.map(renderChain).join('');
   } catch (e) {
     $('error').textContent = e.message;

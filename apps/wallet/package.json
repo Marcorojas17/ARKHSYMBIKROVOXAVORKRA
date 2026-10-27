@@ -1,7 +1,7 @@
 {
-  "name": "wallet-app",
+  "name": "@arkh/wallet",
   "version": "1.0.0",
-  "description": "",
+  "description": "ARKHE Wallet \u00b7 Multi-chain portfolio with anti-spam",
   "main": "index.js",
   "scripts": {
     "dev": "node server.mjs",
@@ -16,7 +16,5 @@
     "ethers": "^6.17.0",
     "express": "^5.3.0"
   },
-  "engines": {
-    "node": "20.x"
-  }
+  "private": true
 }
