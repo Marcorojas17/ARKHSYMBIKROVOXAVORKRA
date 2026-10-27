@@ -19,3 +19,5 @@ dist/
 # Python
 __pycache__/
 *.pyc
+node_modules/
+apps/wallet/node_modules/
