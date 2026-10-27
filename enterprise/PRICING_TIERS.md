@@ -1,3 +1,7 @@
-# enterprise/PRICING_TIERS.md
+# Pricing Tiers
 
-_Pendiente de implementacion._
+| Plan | Precio | Features |
+|---|---|---|
+| Family | $99 MXN | 5 usuarios |
+| Pro | $299 MXN | Ilimitado |
+| Enterprise | Custom | SSO, SLA |

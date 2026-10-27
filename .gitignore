@@ -1,28 +1,7 @@
 node_modules/
 dist/
-.DS_Store
-*.log
-.env
-
-# Núcleo inviolable
 .arkh/
 data-room/
-
-# Bóvedas generadas
-*.arkh
-!tests/fixtures/ejemplo.arkh
-
-# Secretos
 .env
 *.key
-*.pem
-.pinata-jwt
-.w3-token
-
-# Logs
 *.log
-arkh.log
-
-# Build
-dist/
-node_modules/

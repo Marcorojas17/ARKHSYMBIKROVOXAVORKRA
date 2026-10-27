@@ -1,3 +1,4 @@
-# src/unknown/ai_alignment_manifest.json
-
-_Pendiente de implementacion._
+{
+  "principle": "51% Humano / 49% IA",
+  "status": "INVESTIGACION"
+}

@@ -1,3 +1,1 @@
-# src/shared/constants.js
-
-_Pendiente de implementacion._
+export const VERSION = '1.0.0';
