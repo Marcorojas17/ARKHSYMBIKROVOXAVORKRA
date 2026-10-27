@@ -1,3 +1,13 @@
-# apps/server/routes/health.js
+import { Router } from 'express';
+const router = Router();
 
-_Pendiente de implementacion._
+router.get('/', (req, res) => {
+    res.json({
+        status: 'ok',
+        uptime: process.uptime(),
+        timestamp: new Date().toISOString(),
+        service: 'ARKH API'
+    });
+});
+
+export default router;
