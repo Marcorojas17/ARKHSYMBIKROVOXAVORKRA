@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%">
+<defs>
+<linearGradient id="g" x1="0" x2="1">
+<stop offset="0" stop-color="#a855f7"/>
+<stop offset="1" stop-color="#06b6d4"/>
+</linearGradient>
+</defs>
+<rect width="800" height="200" fill="#0a0a0a"/>
+<text x="400" y="90" text-anchor="middle" font-family="monospace" font-size="32" font-weight="bold" fill="url(#g)">◯_● ARKHSYMBIKROVOXAVORKRA</text>
+<text x="400" y="140" text-anchor="middle" font-family="monospace" font-size="16" fill="#888">El legado no se hereda. Se firma.</text>
+<text x="400" y="175" text-anchor="middle" font-family="monospace" font-size="12" fill="#555">51% Humano · 49% IA · 100% Real</text>
+</svg>

@@ -8,3 +8,6 @@ id_ed25519
 node_modules/
 *.tgz
 _LEGACY_RECUPERADO/
+*.log
+mi-boveda.arkh
+*.cjs
